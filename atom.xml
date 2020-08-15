@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pikez.github.io</id>
     <title>Pikez</title>
-    <updated>2020-08-15T13:34:07.120Z</updated>
+    <updated>2020-08-15T13:41:17.658Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pikez.github.io"/>
     <link rel="self" href="https://pikez.github.io/atom.xml"/>
@@ -15,25 +15,21 @@
         <link href="https://pikez.github.io/post/openssl-heartbleed-lou-dong-fen-xi/">
         </link>
         <updated>2014-04-15T12:56:27.000Z</updated>
-        <content type="html"><![CDATA[<hr>
-<h2 id="title-date-2014-04-15t2056270800draft-false">title: &quot;&quot;<br>
-date: 2014-04-15T20:56:27+08:00<br>
-draft: false</h2>
-<p>#Openssl &quot;heartbleed&quot; 漏洞</p>
+        <content type="html"><![CDATA[<h1 id="openssl-heartbleed-漏洞">Openssl &quot;heartbleed&quot; 漏洞</h1>
 <p>漏洞在4.8爆发的那天就看过漏洞分析，但是太浮躁又对openssl了解不是很深，就没能看懂，今天下载了openssl源码，查了些资料。总算对‘heartbleed’漏洞有个完整的认识。</p>
-<p>###ssl 简要原理与心跳包</p>
+<h2 id="ssl-简要原理与心跳包">ssl 简要原理与心跳包</h2>
 <p>ssl是为网络通信提供安全的一种协议，建立在tcp连接之上，对通信双方身份进行认证并加密传输数据。结构如图：</p>
 <figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-openssl1.png" alt="001" loading="lazy"></figure>
 <p>上层是ssl握手层：协商密钥，加密算法等，对双方进行身份认证，同时包含传输的数据。</p>
 <p>下层是ssl记录层：通过握手层确定的安全参数对数据进行封装，同时通过数据格式来检测消息的完整性。</p>
 <p>心跳包就是在客户端和服务器间定时通知对方自己状态的一个自己定义的命令字，按照一定的时间间隔发送，类似于心跳，所以叫做心跳包。</p>
 <p>而ssl中的Heartbeat‘心跳包’存在与握手层。数据格式包括： 心跳包类型(type)，载荷长度(length),载荷 (payload),填充 (padding).</p>
-<p>###漏洞分析</p>
+<h2 id="漏洞分析">漏洞分析</h2>
 <p>结合乌云知识库文章 <a href="http://drops.wooyun.org/papers/1381">关于openssl “心脏出血”漏洞的分析</a>。</p>
 <p>下载到存在漏洞的openssl版本为openssl-1.0.1f。存在漏洞的有两个文件ssl/d1_both.c和ssl/t1_lib.c。</p>
 <p>而乌云的分析文章不但把文件名搞错 （d后面是数字1而不是字母l），而且分析的是前者，基于UDP的TLS，而后者才是常用的TCP（无影响的细节...）</p>
-<p>Ok~开始分析。<br>
-####1.ssl3记录格式和两个宏。</p>
+<p>Ok~开始分析。</p>
+<h3 id="1ssl3记录格式和两个宏">1.ssl3记录格式和两个宏。</h3>
 <pre><code>typedef struct ssl3_record_st
 {
 /*r */    int type;               /* type of record */
@@ -57,7 +53,7 @@ draft: false</h2>
 </code></pre>
 <p>两个宏，位于ssl/ssl_locl.h，心跳处理函数中将使用，可以看出<br>
 n2s 把char数组s中的前两个字节转为unsigned int类型并保存进c。s2n做相反的事情。</p>
-<p>####2.心跳处理函数。</p>
+<h3 id="2心跳处理函数">2.心跳处理函数。</h3>
 <pre><code>int tls1_process_heartbeat(SSL *s)
 {
 unsigned char *p = &amp;amp;s-&amp;gt;s3-&amp;gt;rrec.data[0], *pl;
@@ -104,16 +100,16 @@ RAND_pseudo_bytes(bp, padding);
 </code></pre>
 <p>开始对数据包进行响应，将回应类型（type)放入bp的第一个字节，s2n如上所知，和n2s相反，把payload的值填充到bp的第二三个字节。</p>
 <p>重头戏到了，memcpy函数，把从pl后的payload字节放入bp中，而payload的值根本无法确定是数据的真实长度，而是由length给定的。如果实际的payload小于length的值，便会向后寻找数据填充。漏洞就此产生~</p>
-<p>###漏洞利用<br>
-<img src="http://zend3.qiniudn.com/Blog-openssl2.png" alt="002" loading="lazy"></p>
+<h2 id="漏洞利用">漏洞利用</h2>
+<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-openssl2.png" alt="002" loading="lazy"></figure>
 <p>先简单看下利用脚本。</p>
 <p>hb 是构造的心跳包，01代表请求类型，40 00是length的值，这里4000化为2进制为16384 共16kb，其实完全可以ff ff 这样一次可以得到64kb的数据。</p>
 <p>PoC的整体思路：<br>
 使用socket创建TCP连接 -&gt; 建立ssl握手（发送Client hello包和接受Server Hello包）<br>
 -&gt; 发送恶意heartbeat包 -&gt; 输出异常数据。</p>
 <p>具体实现细节就不分析了。可以将脚本进行一些改动，比如循环遍历数据，格式化保存数据，再加上循环ip范围段实现自动化检测和利用等等。</p>
-<p><img src="http://zend3.qiniudn.com/Blog-openssl3.png" alt="003" loading="lazy"><br>
-###漏洞修复。</p>
+<figure data-type="image" tabindex="3"><img src="http://zend3.qiniudn.com/Blog-openssl3.png" alt="003" loading="lazy"></figure>
+<h3 id="漏洞修复">漏洞修复。</h3>
 <p>漏洞产生的原因很简单，所以修补起来也很容易，找到修补后的openssl-1.0.1g 版本。</p>
 <pre><code>/* Read type and payload length first */
 if (1 + 2 + 16 &amp;gt; s-&amp;gt;s3-&amp;gt;rrec.length)
@@ -125,7 +121,7 @@ return 0; /* silently discard per RFC 6520 sec. 4 */
 pl = p;
 </code></pre>
 <p>代码首先对心跳包的数据是否为零进行判断，16为padding填充值的最小长度，1+2+16为一个心跳包中必有的参数（不包括数据）,然后对心跳包的长度是否足够进行判断。就是那么简单~</p>
-<p>###一些安全思考。</p>
+<h3 id="一些安全思考">一些安全思考。</h3>
 <ul>
 <li><strong>安全的本质是信任问题。</strong></li>
 </ul>
@@ -147,7 +143,7 @@ pl = p;
 <li><strong>对基础设施的安全关注度不够。</strong></li>
 </ul>
 <p>作为让网络变得更安全的安全产品，却自身出现了问题，才会在网络上掀起轩然大波，但看到openssl开发团队人数之少，经费之短缺，很难把责任都推向他们。一个安全的互联网，不应该只是靠一些人的努力。</p>
-<p>###一些疑惑。</p>
+<h3 id="一些疑惑">一些疑惑。</h3>
 <blockquote></blockquote>
 <ol>
 <li>PoC里心跳包的第一排数据是什么东西，sslv3记录格式一开始就是数据类型的呀。</li>
@@ -158,7 +154,65 @@ pl = p;
 </ol>
 <p>附：<br>
 网上找到的一幅对漏洞原理说的很形象的漫画</p>
-<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-openssl5.jpg" alt="005" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://zend3.qiniudn.com/Blog-openssl5.jpg" alt="005" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 爬虫总结]]></title>
+        <id>https://pikez.github.io/post/python-pa-chong-zong-jie/</id>
+        <link href="https://pikez.github.io/post/python-pa-chong-zong-jie/">
+        </link>
+        <updated>2013-11-15T13:39:58.000Z</updated>
+        <summary type="html"><![CDATA[<p>spider.py -u url -d deep -f logfile -l loglevel(1-5)  --testself -thread number --dbfile  filepath  --key=”HTML5”</p>
+<p>这是爬虫实现的基本功能。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>spider.py -u url -d deep -f logfile -l loglevel(1-5)  --testself -thread number --dbfile  filepath  --key=”HTML5”</p>
+<p>这是爬虫实现的基本功能。</p>
+<!-- more -->
+<p>参数说明：</p>
+<blockquote></blockquote>
+<ul>
+<li>-u 指定爬虫开始地址</li>
+<li>-d 指定爬虫深度</li>
+<li>-l 日志记录文件记录详细程度，数字越大记录越详细，可选参数，默认spider.log</li>
+<li>--thread 指定线程池大小，多线程爬取页面，可选参数，默认10</li>
+<li>--dbfile 存放结果数据到指定的数据库（sqlite）文件中</li>
+<li>--key 页面内的关键词，获取满足该关键词的网页，可选参数，默认为所有页面</li>
+<li>--testself 程序自测，可选参数于是构思结构,大致将代码分成几个部分：</li>
+</ul>
+<h2 id="总体思路">总体思路</h2>
+<ol>
+<li>抓取函数（负责每个URL对应的保存，解析，搜索链接并返回,对于以后每个URL只需调用这个函数即可）；</li>
+<li>日志函数（负责记录日志）；</li>
+<li>线程和线程池类（负责提供线程池机制，并发抓取网页）；</li>
+<li>数据库类（负责保存网页）；</li>
+<li>主函数（负责深度控制和其他）；</li>
+</ol>
+<h2 id="关于爬虫算法">关于爬虫算法</h2>
+<p>开始并没有搜索相关的知识，按照自己的想法构思了抓取页面的URL到列表，再用此列表进行下一层的抓取的思路，后来明白了这是广度优先搜索。可有因为这种算法，导致后面编写的时候遇上语法上的困难，对python的掌握还是没我想像中的熟练。</p>
+<h2 id="关于抓取">关于抓取</h2>
+<p>首先，使用了Requests库而不是urllib2，是由于它的简单易用，易扩展和处理编码问题等等。 然后，编码问题，页面的编码老是千奇百怪，还好beautifulsoup可以把网页指定编码保存，该模块对于html页面的解析也是简单易用 接着就是re模块正则表达式查找关键字，没考虑汉字作key的情况，囧~ 以后补上</p>
+<h2 id="关于线程池和多线程">关于线程池和多线程</h2>
+<p>这是这次遇到的最大的困难，通过找资料学习以后，大致明白了线程池机制，然后摸着石头过河，实现了一个线程池，然而因为每次抓取都要返回一个链接列表，在线程中又找不到办法返回这个列表。。。一度陷入困境，把列表作为全局变量保存等办法每一个能搞定，折腾两天后放弃了，查了下刁哥说的ThreadPool模块，果然简单，而且提供了回调函数，能够返回线程中函数的返回值。也就作罢，以后看看这模块的源码，再自己实现一下</p>
+<h2 id="关于数据库">关于数据库</h2>
+<p>Sqlite3内置在python里面比较轻量，使用挺轻松的。但对于多线程的支持却不太好。如果所有线程使用一个数据库连接，会导致ProgramError，把check_same_Threading设会False可以避免报错，却是不安全的，会丢失数据。如果每个线程创建一个数据库连接，会导致Database is locked错误，大概不支持同一时间多线程写入。尝试给数据库上锁，将未保存的数据放入列表，最后来保存等方法后，才想到一个简单的办法：在触发异常后，再次调用插入数据的函数，直至成功，让程序自己找插入数据的时间点。最后测试没有丢失任何数据</p>
+<h2 id="关于深度控制">关于深度控制</h2>
+<p>整个程序可以这样拓展： 抓取一个网页 --&gt; 抓取一个列表内的网页（即一层） --&gt; 抓取预定深度的网页：</p>
+<pre><code>For  i  in  range(层数）:
+   For  x  in range(URL列表）：
+       Spider（）（多线程执行）
+</code></pre>
+<h2 id="测试">测试</h2>
+<p>Sina.com.cn两层一共1635个URL（下一层119828，吓哭。。）保存数据约300M，10线程约半小时完成。</p>
+<h2 id="一些小困难和收获">一些小困难和收获</h2>
+<ul>
+<li>起初使用html=urllib2.urlopen时，没想到该html对象只能使用一次，再次使用就返回了None，程序没法往下走，各种纠结。</li>
+<li>在测试日志处理时发现日志会有重复现象，在网上找不到任何解决办法，看了文档后才知道原因是没有调用logger.removeHandler 去移除处理器。</li>
+<li>访问网页的时候，感觉仅仅使用headers还不够，抓久了会被禁止访问，考虑使用代理。<br>
+编写过程中一直有考虑性能问题，想避免各种复杂或不必要的实现方式，无奈水平不行，慢慢进行改进。</li>
+<li>出问题一定不能只在google里找答案，不然多数情况会掉进坑，看官方文档是最好的解决办法（虽然英语渣出翔）对各种模块进行了学习，甚至有琢磨源代码的欲望。</li>
+</ul>
+<p>爬虫功能基本实现，性能和代码简洁程度等还可以继续改进，有时间加入自己实现的线程池。源代码就暂时不贴了。</p>
 ]]></content>
     </entry>
 </feed>

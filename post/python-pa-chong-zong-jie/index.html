@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="https://pikez.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content=""><meta charset="UTF-8"><title>关于 | Pikez</title>
+<link rel="shortcut icon" href="https://pikez.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content=""><meta charset="UTF-8"><title>Python 爬虫总结 | Pikez</title>
 <link href="https://pikez.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://pikez.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://pikez.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 <script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
 
-<link rel="canonical" href="https://pikez.github.io/post/about/" />
+<link rel="canonical" href="https://pikez.github.io/post/python-pa-chong-zong-jie/" />
 </head>
 <body>
 <div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
@@ -23,22 +23,80 @@
 
 <div class="main"><div class="main-inner"><div class="content">
 <article class="post">
-<h2 class="post_title sm_margin"><a>关于</a></h2>
+<h2 class="post_title sm_margin"><a>Python 爬虫总结</a></h2>
 <script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
-<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2019-01-25</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px"></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">3字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">1 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2013-11-15</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px"></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">1256字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">5 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
 </section>
 
 <div style="display:flex">
 <div class="md_block" id="md_block">
 <div class="round-shape-one"></div>
-<blockquote>
-<p>a software engineer</p>
-</blockquote>
+<p>spider.py -u url -d deep -f logfile -l loglevel(1-5)  --testself -thread number --dbfile  filepath  --key=”HTML5”</p>
+<p>这是爬虫实现的基本功能。</p>
+<!-- more -->
+<p>参数说明：</p>
+<blockquote></blockquote>
+<ul>
+<li>-u 指定爬虫开始地址</li>
+<li>-d 指定爬虫深度</li>
+<li>-l 日志记录文件记录详细程度，数字越大记录越详细，可选参数，默认spider.log</li>
+<li>--thread 指定线程池大小，多线程爬取页面，可选参数，默认10</li>
+<li>--dbfile 存放结果数据到指定的数据库（sqlite）文件中</li>
+<li>--key 页面内的关键词，获取满足该关键词的网页，可选参数，默认为所有页面</li>
+<li>--testself 程序自测，可选参数于是构思结构,大致将代码分成几个部分：</li>
+</ul>
+<h2 id="总体思路">总体思路</h2>
+<ol>
+<li>抓取函数（负责每个URL对应的保存，解析，搜索链接并返回,对于以后每个URL只需调用这个函数即可）；</li>
+<li>日志函数（负责记录日志）；</li>
+<li>线程和线程池类（负责提供线程池机制，并发抓取网页）；</li>
+<li>数据库类（负责保存网页）；</li>
+<li>主函数（负责深度控制和其他）；</li>
+</ol>
+<h2 id="关于爬虫算法">关于爬虫算法</h2>
+<p>开始并没有搜索相关的知识，按照自己的想法构思了抓取页面的URL到列表，再用此列表进行下一层的抓取的思路，后来明白了这是广度优先搜索。可有因为这种算法，导致后面编写的时候遇上语法上的困难，对python的掌握还是没我想像中的熟练。</p>
+<h2 id="关于抓取">关于抓取</h2>
+<p>首先，使用了Requests库而不是urllib2，是由于它的简单易用，易扩展和处理编码问题等等。 然后，编码问题，页面的编码老是千奇百怪，还好beautifulsoup可以把网页指定编码保存，该模块对于html页面的解析也是简单易用 接着就是re模块正则表达式查找关键字，没考虑汉字作key的情况，囧~ 以后补上</p>
+<h2 id="关于线程池和多线程">关于线程池和多线程</h2>
+<p>这是这次遇到的最大的困难，通过找资料学习以后，大致明白了线程池机制，然后摸着石头过河，实现了一个线程池，然而因为每次抓取都要返回一个链接列表，在线程中又找不到办法返回这个列表。。。一度陷入困境，把列表作为全局变量保存等办法每一个能搞定，折腾两天后放弃了，查了下刁哥说的ThreadPool模块，果然简单，而且提供了回调函数，能够返回线程中函数的返回值。也就作罢，以后看看这模块的源码，再自己实现一下</p>
+<h2 id="关于数据库">关于数据库</h2>
+<p>Sqlite3内置在python里面比较轻量，使用挺轻松的。但对于多线程的支持却不太好。如果所有线程使用一个数据库连接，会导致ProgramError，把check_same_Threading设会False可以避免报错，却是不安全的，会丢失数据。如果每个线程创建一个数据库连接，会导致Database is locked错误，大概不支持同一时间多线程写入。尝试给数据库上锁，将未保存的数据放入列表，最后来保存等方法后，才想到一个简单的办法：在触发异常后，再次调用插入数据的函数，直至成功，让程序自己找插入数据的时间点。最后测试没有丢失任何数据</p>
+<h2 id="关于深度控制">关于深度控制</h2>
+<p>整个程序可以这样拓展： 抓取一个网页 --&gt; 抓取一个列表内的网页（即一层） --&gt; 抓取预定深度的网页：</p>
+<pre><code>For  i  in  range(层数）:
+   For  x  in range(URL列表）：
+       Spider（）（多线程执行）
+</code></pre>
+<h2 id="测试">测试</h2>
+<p>Sina.com.cn两层一共1635个URL（下一层119828，吓哭。。）保存数据约300M，10线程约半小时完成。</p>
+<h2 id="一些小困难和收获">一些小困难和收获</h2>
+<ul>
+<li>起初使用html=urllib2.urlopen时，没想到该html对象只能使用一次，再次使用就返回了None，程序没法往下走，各种纠结。</li>
+<li>在测试日志处理时发现日志会有重复现象，在网上找不到任何解决办法，看了文档后才知道原因是没有调用logger.removeHandler 去移除处理器。</li>
+<li>访问网页的时候，感觉仅仅使用headers还不够，抓久了会被禁止访问，考虑使用代理。<br>
+编写过程中一直有考虑性能问题，想避免各种复杂或不必要的实现方式，无奈水平不行，慢慢进行改进。</li>
+<li>出问题一定不能只在google里找答案，不然多数情况会掉进坑，看官方文档是最好的解决办法（虽然英语渣出翔）对各种模块进行了学习，甚至有琢磨源代码的欲望。</li>
+</ul>
+<p>爬虫功能基本实现，性能和代码简洁程度等还可以继续改进，有时间加入自己实现的线程池。源代码就暂时不贴了。</p>
 
 <span id="footnote"></span>
 <div id = "warn"></div>
 </div>
-<div class="toc-container"></div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%80%BB%E4%BD%93%E6%80%9D%E8%B7%AF">总体思路</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%AE%97%E6%B3%95">关于爬虫算法</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%8A%93%E5%8F%96">关于抓取</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B">关于线程池和多线程</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93">关于数据库</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%B7%B1%E5%BA%A6%E6%8E%A7%E5%88%B6">关于深度控制</a></li>
+<li><a href="#%E6%B5%8B%E8%AF%95">测试</a></li>
+<li><a href="#%E4%B8%80%E4%BA%9B%E5%B0%8F%E5%9B%B0%E9%9A%BE%E5%92%8C%E6%94%B6%E8%8E%B7">一些小困难和收获</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="fullPage"><canvas id="canvas"></canvas></div>
 </article>
@@ -55,7 +113,7 @@ if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop)
 var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
 var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
 var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
-content="本文最后更新于2019-01-25，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2019-01-25 19:09:48";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+content="本文最后更新于2013-11-15，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2013-11-15 21:39:58";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
 </script>
 <style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://pikez.github.io" style="margin:0;">Pikez</a>.</div>
