@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pikez.github.io</id>
     <title>Pikez</title>
-    <updated>2020-08-15T14:25:07.487Z</updated>
+    <updated>2020-08-15T15:00:15.138Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pikez.github.io"/>
     <link rel="self" href="https://pikez.github.io/atom.xml"/>
@@ -10,12 +10,69 @@
     <icon>https://pikez.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Pikez</rights>
     <entry>
+        <title type="html"><![CDATA[C函数参数的传递]]></title>
+        <id>https://pikez.github.io/post/c-han-shu-can-shu-de-chuan-di/</id>
+        <link href="https://pikez.github.io/post/c-han-shu-can-shu-de-chuan-di/">
+        </link>
+        <updated>2016-07-12T14:00:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近萌萌的女票在学C语言，刚好又被指针给虐了，而我顺带也被虐了，赶快看看书帮她虐回去。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近萌萌的女票在学C语言，刚好又被指针给虐了，而我顺带也被虐了，赶快看看书帮她虐回去。</p>
+<!-- more -->
+<pre><code>void swap1(int *p, int *q)
+{
+    int t;
+    t = *p;
+    *p = *q;
+    *p = t;
+}   
+void swap2(int *p, int *q)
+{
+    int *t;
+    t = p;
+    p = q;
+    q = t;
+}
+int main()
+{
+    int a, b, *p, *q;
+    p = &amp;a;
+    q = &amp;b;
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    printf(&quot;before swap p:%p, q:%p\n&quot;, &amp;p, &amp;q);
+    swap2(p, q);
+    printf(&quot;after swap p:%p, q:%p\n&quot;, &amp;p, &amp;q);
+    printf(&quot;%d %d&quot;, a, b);
+}
+</code></pre>
+<p>这是让她不得其解的代码，为什么swap2不能成功交换两个元素的值，都传的地址呀。然而大多数国内教材上的说法：函数传参有传值和传址两种方式。</p>
+<p>都是错的或者说表述不清楚。</p>
+<p>C函数的所有参数均以“传值调用”方式进行传递，也就是每个参数都是拷贝。<br>
+看一下调用swap2前后的指针地址</p>
+<pre><code>1 2
+before swap p:0x7fff5d6069e0, q:0x7fff5d6069d8
+swap2: p:0x7fff5d6069ec, q:0x7fff5d6069e8
+swap2: p:0x7fff5d6069e8, q:0x7fff5d6069ec
+after swap p:0x7fff5d6069e0, q:0x7fff5d6069d8
+1 2
+</code></pre>
+<p>swap2的流程如下:</p>
+<p>首先复制了一份p和q，这份p和q仅在函数内存在，可以看到和函数外的p，q并不相同，但他们的值都是a和b的地址，但是内部声明了一个指针变量，所以交换的是函数内部指针本身的地址，在函数返回后，原指针没有发生变化，所以交换不成功。</p>
+<p>而swap1的流程：</p>
+<p>声明了一个int变量，交换时取出了指针所指向的值，改变了指针保存的地址的所指向的值（好拗口），虽然这两个指针也是复制的，但指向的地方和外部一样，交换才能成功。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[实习面试流水账]]></title>
         <id>https://pikez.github.io/post/shi-xi-mian-shi-liu-shui-zhang/</id>
         <link href="https://pikez.github.io/post/shi-xi-mian-shi-liu-shui-zhang/">
         </link>
         <updated>2016-03-30T14:10:59.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="蘑菇街">蘑菇街</h2>
+        <summary type="html"><![CDATA[<p>记录一下找实习的经历</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记录一下找实习的经历</p>
+<!-- more -->
+<h2 id="蘑菇街">蘑菇街</h2>
 <h3 id="一面">一面</h3>
 <h4 id="自我介绍">自我介绍</h4>
 <ul>
@@ -143,6 +200,42 @@ P.S：好久以后收到邮件。。。被拒。。</p>
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[追寻强大的内心]]></title>
+        <id>https://pikez.github.io/post/zhui-xun-qiang-da-de-nei-xin/</id>
+        <link href="https://pikez.github.io/post/zhui-xun-qiang-da-de-nei-xin/">
+        </link>
+        <updated>2015-08-02T14:59:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>坏心情被一场大雨浇没了。刚好秦正回到学校，出门变成接人，然后完成一个最后的晚餐。</p>
+<p>闲了两天，没有再给自己没事找事，感觉轻松下来许多，可又被突然的人去楼空打败了，真是弱到不敢看，经不起区区十几天的离别就是种病。所以大概自认为把朋友看得重其实是太依赖别人，自嘲一下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>坏心情被一场大雨浇没了。刚好秦正回到学校，出门变成接人，然后完成一个最后的晚餐。</p>
+<p>闲了两天，没有再给自己没事找事，感觉轻松下来许多，可又被突然的人去楼空打败了，真是弱到不敢看，经不起区区十几天的离别就是种病。所以大概自认为把朋友看得重其实是太依赖别人，自嘲一下。</p>
+<!-- more -->
+<p>看到哲川的微博，什么是内心的强大，去知乎看了好多答案</p>
+<blockquote>
+<p>能够和那些坏的东西和平相处，却不同流合污。<br>
+无论是自己犯过错的过往，不得已做的违心事，这世上存在的黑暗与罪恶，他人所带来的“地狱”，所厌恶所鄙夷甚至所痛恨的东西……接受它们的存在以及不可改变，敢直视它，敢靠近它，但永远不会融入它。</p>
+</blockquote>
+<blockquote>
+<p>坚持为美好的东西而努力，却不为失败或得不到而焦灼。<br>
+笃定地知道自己需要什么，能够得到什么，应当如何、怎样为所求而努力。得之心生欢喜，不得不生怨怼。</p>
+</blockquote>
+<blockquote>
+<p>清醒地follow your heart，却不被欲望所驱使。<br>
+宽容比自己失意的人，赞美比自己得意的人。<br>
+喜怒哀乐都尝遍，仍然爱这个世界，包括美与丑的一面。</p>
+</blockquote>
+<p>确实喜欢这个回答，想想自己，最弱的就是心态太容易受到环境的影响，一天遇上两件事可以改变两次心情和心态。是不是可以学习没心没肺一点，这样心情就不容易被带飞~</p>
+<p>好在始终有自己想坚持的，明白我要做什么想做什么，虽然有点儿辛苦，时不时羡慕那些什么都还不用考虑的童鞋们，可没办法，自己选的坑，哭着也要爬出来。</p>
+<p>想再坚定一点，虽然内心强大不紧紧是能面对困难和承受。能够更坦然的面对没有经历过的，而不是每次遇到事情都要不知所措一会，这样才会更让人有安全感。</p>
+<p>瑞琪说一个大男生如此多愁善感，我竟无言以对。好像最近是有点负能量爆发，而且还找朋友们发泄，默默道个歉，被我找上门的倒霉孩纸。</p>
+<p>八月有五个周末诶，已经过了一个，想开启一轮新的学习计划，但是看着时间太零碎就作罢了。计划把工作室运维(从今天开始也要自称DevOps，要做不一样的事情)规划妥当，这样任何时候想离开都不会太仓促。</p>
+<p>有很多想问想说的，忍着过一会就会不想了，很在意别人的言论，所以让我很难过。</p>
+<p>生活节奏在慢慢变好，一本有趣的书和游戏，得到这句话<br>
+keep it to yourself。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[大二下学期总结]]></title>
         <id>https://pikez.github.io/post/da-er-xia-xue-qi-zong-jie/</id>
         <link href="https://pikez.github.io/post/da-er-xia-xue-qi-zong-jie/">
@@ -179,59 +272,6 @@ P.S：好久以后收到邮件。。。被拒。。</p>
 <p>被太多人当做弯的，无所谓。</p>
 <p>享受被人看得起的感觉，看贬自己的还是自己。</p>
 <p>充斥各种无力和疲累，希望下一学期不要再这样了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C函数参数的传递]]></title>
-        <id>https://pikez.github.io/post/c-han-shu-can-shu-de-chuan-di/</id>
-        <link href="https://pikez.github.io/post/c-han-shu-can-shu-de-chuan-di/">
-        </link>
-        <updated>2015-07-12T14:00:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>最近萌萌的女票在学C语言，刚好又被指针给虐了，而我顺带也被虐了，赶快看看书帮她虐回去。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>最近萌萌的女票在学C语言，刚好又被指针给虐了，而我顺带也被虐了，赶快看看书帮她虐回去。</p>
-<!-- more -->
-<pre><code>void swap1(int *p, int *q)
-{
-    int t;
-    t = *p;
-    *p = *q;
-    *p = t;
-}   
-void swap2(int *p, int *q)
-{
-    int *t;
-    t = p;
-    p = q;
-    q = t;
-}
-int main()
-{
-    int a, b, *p, *q;
-    p = &amp;a;
-    q = &amp;b;
-    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
-    printf(&quot;before swap p:%p, q:%p\n&quot;, &amp;p, &amp;q);
-    swap2(p, q);
-    printf(&quot;after swap p:%p, q:%p\n&quot;, &amp;p, &amp;q);
-    printf(&quot;%d %d&quot;, a, b);
-}
-</code></pre>
-<p>这是让她不得其解的代码，为什么swap2不能成功交换两个元素的值，都传的地址呀。然而大多数国内教材上的说法：函数传参有传值和传址两种方式。</p>
-<p>都是错的或者说表述不清楚。</p>
-<p>C函数的所有参数均以“传值调用”方式进行传递，也就是每个参数都是拷贝。<br>
-看一下调用swap2前后的指针地址</p>
-<pre><code>1 2
-before swap p:0x7fff5d6069e0, q:0x7fff5d6069d8
-swap2: p:0x7fff5d6069ec, q:0x7fff5d6069e8
-swap2: p:0x7fff5d6069e8, q:0x7fff5d6069ec
-after swap p:0x7fff5d6069e0, q:0x7fff5d6069d8
-1 2
-</code></pre>
-<p>swap2的流程如下:</p>
-<p>首先复制了一份p和q，这份p和q仅在函数内存在，可以看到和函数外的p，q并不相同，但他们的值都是a和b的地址，但是内部声明了一个指针变量，所以交换的是函数内部指针本身的地址，在函数返回后，原指针没有发生变化，所以交换不成功。</p>
-<p>而swap1的流程：</p>
-<p>声明了一个int变量，交换时取出了指针所指向的值，改变了指针保存的地址的所指向的值（好拗口），虽然这两个指针也是复制的，但指向的地方和外部一样，交换才能成功。</p>
 ]]></content>
     </entry>
     <entry>
@@ -667,8 +707,10 @@ namespace ConsoleApplication1
         <link href="https://pikez.github.io/post/openssl-heartbleed-lou-dong-fen-xi/">
         </link>
         <updated>2014-04-15T12:56:27.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="openssl-heartbleed-漏洞">Openssl &quot;heartbleed&quot; 漏洞</h1>
-<p>漏洞在4.8爆发的那天就看过漏洞分析，但是太浮躁又对openssl了解不是很深，就没能看懂，今天下载了openssl源码，查了些资料。总算对‘heartbleed’漏洞有个完整的认识。</p>
+        <summary type="html"><![CDATA[<p>漏洞在4.8爆发的那天就看过漏洞分析，但是太浮躁又对openssl了解不是很深，就没能看懂，今天下载了openssl源码，查了些资料。总算对‘heartbleed’漏洞有个完整的认识。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>漏洞在4.8爆发的那天就看过漏洞分析，但是太浮躁又对openssl了解不是很深，就没能看懂，今天下载了openssl源码，查了些资料。总算对‘heartbleed’漏洞有个完整的认识。</p>
+<!-- more -->
 <h2 id="ssl-简要原理与心跳包">ssl 简要原理与心跳包</h2>
 <p>ssl是为网络通信提供安全的一种协议，建立在tcp连接之上，对通信双方身份进行认证并加密传输数据。结构如图：</p>
 <figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-openssl1.png" alt="001" loading="lazy"></figure>
@@ -807,6 +849,64 @@ pl = p;
 <p>附：<br>
 网上找到的一幅对漏洞原理说的很形象的漫画</p>
 <figure data-type="image" tabindex="4"><img src="http://zend3.qiniudn.com/Blog-openssl5.jpg" alt="005" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python + Flask搭建博客]]></title>
+        <id>https://pikez.github.io/post/python-flask-da-jian-bo-ke/</id>
+        <link href="https://pikez.github.io/post/python-flask-da-jian-bo-ke/">
+        </link>
+        <updated>2014-02-04T14:38:17.000Z</updated>
+        <content type="html"><![CDATA[<p>自己实现一个博客的想法很久了，趁着寒假有空闲时间搞定，顺手做一些记录。</p>
+<h2 id="框架选择">框架选择</h2>
+<h3 id="不顺手的django">不顺手的Django</h3>
+<p>第一次用Python写web应用是写俱乐部任务发布平台的时候，当时没想太多，只接选了Django，用的确实爽，session，orm，admin等等什么都是现成的，开发效率挺高。但是第二次用Django写APP后台的时候开始感到了不爽，感觉到了条条框框的限制，比如authority被限制在预定的模型里。Django很多东西都是预配置好，一旦觉得不适合却难以替换，起码以我的能力很难扒源码改东西。想到油条正在弄得edx平台也是被这个折磨得不浅。感觉Django确实像大家说的那样，顺着他的思想来的话会用的很开心，相反则不然。</p>
+<h3 id="另选一个框架">另选一个框架</h3>
+<p>Python的Web框架确实不少，大大小小一箩筐。了解一下和看了大家的评价后比较中意tornado，flask。tornado的异步非阻塞IO看起来确实比较高大上。但是我这小博客确实用不到，现在就想掌握一个顺心又能快速实现想法的东西，有时间再来研究下机制还是不错的。然后就看到了flask，微而不是轻，容易扩展且选择多。就决定是她了。</p>
+<h2 id="前端实现">前端实现</h2>
+<p>一开始就打算从头到尾自己实现，所以前端也只能硬着头皮上，可无奈又特别讨厌javascript。宗沅给我推荐过bootstrap前端UI库，确实漂亮，就拿来折腾了两天。花了两天实现了这个 <a href="http://blog.z3lion.com">Zend's Blog</a>。最后没使用这个还是觉得太丑了，自己真没有艺术细胞。然后找到了一个jekyll的模板<a href="https://github.com/Simpleyyt/simpleyyt.github.io">Simpleyyt</a>.很喜欢这种风格。感谢这个作者：）</p>
+<h2 id="flask之旅">Flask之旅</h2>
+<h3 id="扩展库很太多">扩展库很（太）多</h3>
+<p>虽说是微框架，意在让自己实现需要的功能。flask提供了强大的<a href="http://flask.pocoo.org/docs/0.10/extensiondev/">flask.ext</a>扩展模块,很容易的把自己实现的模块与flask结构。</p>
+<p>由于用的人多了，已经造好的轮子就不少。官网给出了最常用的<a href="http://flask.pocoo.org/extensions/">Flask Extensions</a>.其中有不少很强大的，比如<a href="https://github.com/mrjoes/flask-admin/">Flask-Admin</a>。在我看来完全不逊于Django的admin，还有构建应用常用的<a href="http://github.com/mitsuhiko/flask-sqlalchemy/">Flask-SQLAlchemy</a>,<a href="https://github.com/thadeusb/flask-cache/">Flask-Cache</a>,<a href="https://github.com/maxcountryman/flask-login/">Flask-Login</a>等等。很多情况我们不用需要自己再去实现，到了这，学习flask变成了学习这些扩展库，加上这些库多多少少也有点坑，这一折腾，成本并不小。</p>
+<h3 id="纠结的modle层">纠结的modle层</h3>
+<p>SQLAlchemy应该是Python下用的最多的ORM了，flask-sqlalchemy对其进行了一层封装，没想到用起来来这么蛋疼，可能真的是我太渣了，不习惯各种语法，文档还不太容易懂( ˇˍˇ )很多时候想直接写Sql语句了，那多爽。<br>
+flask-sqlalchemy中需要进行一步初始化，加载配置，然后在初始化的类上进行操作，附带一个query的属性用来查询，加上额外的*_or_404(),paginate等实用方法。<br>
+一个简单and查询对比:<br>
+SQLAlchemy:</p>
+<pre><code>from sqlalchemy import and_
+query.filter(and_(User.name == 'zend', User.fullname == 'zends'))
+</code></pre>
+<p>flask-sqlalchemy：</p>
+<pre><code>db = SQLAlchemy(app)
+self.filter(db.and_(User.name == 'zend', User.fullname == 'zends'))
+</code></pre>
+<h3 id="蓝图">蓝图</h3>
+<p>蓝图也算是Flask的一个特色，类似于Django的app管理，将应用模块化。 只需把原来对app的直接路由改为对蓝图的路由，最后再注册到app。蓝图对反向路由url_for的使用较多。</p>
+<pre><code>simple_page = Blueprint('simple_page', __name__,
+                        template_folder='templates') 
+app = Flask(__name__)
+app.register_blueprint(simple_page)
+</code></pre>
+<p>比较折腾的是对蓝图中模板和静态文件的部署，直到找到这篇文章<a href="http://spacewander.github.io/explore-flask-zh/7-blueprints.html">蓝图</a>对蓝图的使用给了很好的解释，实际上这整个教程也是相当不错的，相见恨晚。</p>
+<h3 id="性能问题">性能问题</h3>
+<p>大概Python的应用都得考虑性能问题（当然我的博客不用考虑= =）自己动手简单的测试下</p>
+<p>选择三个框架对比flask, tornado高性能, Django,环境相同，tornado直接启动。代码同为基本的hello world</p>
+<p><strong>siege -c 100 -r 200 -b 并发100 次数200 总20000次</strong></p>
+<figure data-type="image" tabindex="1"><img src="http://zend3.qiniudn.com/Blog-flask-blog1.png" alt="01" loading="lazy"></figure>
+<p><strong>siege -c 200 -r 200 -b 并发200 次数200 总40000次</strong></p>
+<figure data-type="image" tabindex="2"><img src="http://zend3.qiniudn.com/Blog-flask-blog2.png" alt="02" loading="lazy"></figure>
+<p>很粗糙的测试，也能可以看出写端倪，在并发量低的情况下影响并不是很大，只有Django在加上异步能提升一些性能。<br>
+并发加到200，加上gevent才能顺利完成请求。<br>
+不负责任的说 gevent对性能提升还是很明显，在一般的HTTP请求下，flask和tornado差距并不大。</p>
+<p>##~~~</p>
+<blockquote></blockquote>
+<ol>
+<li>千万不要把文件命名为flask.py，文档上说的好好的，会影响正常模块的导入，被弄得莫名其妙，到处查环境问题。</li>
+<li>文档开头专门说明了对web应用安全的重要性，对搞安全出身的人来说真是好亲切~~~</li>
+<li>。。。</li>
+</ol>
+<p>最后把博客的源码附上(渣渣代码) <a href="https://github.com/ZenQ3/ZenBlog">ZenBlog</a></p>
 ]]></content>
     </entry>
     <entry>
